@@ -95,7 +95,7 @@
                     <div class="col-md-12 d-flexx justify-content-between align-items-center" >
                         <div class="row d-flex align-items-center">
 
-                        <div class="col">
+                          <div class="col">
                                 <form action="" method="post">
                                 <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Pesquisar" style="margin-right: 16px; min-width: 256px;" name="NomeAnimal">
                             </div>

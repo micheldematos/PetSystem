@@ -37,10 +37,11 @@ $routes->get('/', 'Home::index');
 $routes->get("ConAdm", "Dados::telaConsultaAdm");
 
 // Animal
-$routes->get("cadA", "Dados::cadastrarAnimal");
-$routes->post("CadA2", "Dados::cadastrarAnimal2");
 $routes->get("ConAnimal", "Dados::consultaAnimais");
 $routes->post("ConAnimal", "Dados::consultaAnimais2");
+$routes->get("cadA", "Dados::cadastrarAnimal");
+$routes->post("CadA2", "Dados::cadastrarAnimal2");
+
 $routes->get("AltAnimal/(:num)", "Dados::alterarAnimal/$1");
 $routes->post("AltAnimal/(:num)", "Dados::alterarAnimal2/$1");
 $routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1");
