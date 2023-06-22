@@ -33,7 +33,7 @@ $routes->set404Override();
 // Home
 $routes->get('/', 'Home::index');
 
-// Administrador
+// Administrador (NOK)
 $routes->get("ConAdm", "Dados::telaConsultaAdm");
 
 // Animal
