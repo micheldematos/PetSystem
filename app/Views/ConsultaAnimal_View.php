@@ -94,6 +94,16 @@
 
                     <div class="col-md-12 d-flexx justify-content-between align-items-center" >
                         <div class="row d-flex align-items-center">
+
+                        <form action="" method="post">
+
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" name="NomeAnimal" placeholder="Nome Do Animal"
+                                    aria-label="Recipient's username" aria-describedby="button-addon2">
+                                <input class="btn btn-outline-secondary" type="submit" id="button-addon2"></input>
+                            </div>
+                        </form>
+
                             <div class="col">
                                 <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Pesquisar" style="margin-right: 16px; min-width: 256px;">
                             </div>
