@@ -1,0 +1,165 @@
+/* Oculta a a imagem da home quando reduzir a largura */
+@media (max-width: 820px) {
+    .img_home{
+        display: none;
+    }
+    
+}
+
+@media (min-width: 821px) {
+    .logo_home{
+        display: none;
+    }
+}
+/* Oculta a a imagem da home quando reduzir a largura */
+@media (max-width: 991px) {
+    #logo-cabecalho{
+        display: none;
+    }
+}
+
+@media (min-width: 991px) {
+    #logo-cabecalho-mobile{
+        display: none;
+    }
+}
+
+/* Ajuste de botão de cadastre-se no responsivo na tela de consulta 483 */
+
+@media (max-width: 483px) {
+    .btConCad{
+        margin-top: 16px;
+    }
+}
+
+
+/* Resoluções */
+.width444{
+    width: 444px;
+}
+
+.height100vh{
+    height: 100vh;
+}
+
+
+/* Fontes */
+.fonte-titulo {
+    font-family: 'Montserrat';
+    color: #233B56;
+}
+
+.fonte-titulo-claro {
+    font-family: 'Montserrat';
+    color: white;
+}
+
+
+/* Botoes */
+
+
+/* DropDown Menu */
+.dropdown-menu{
+    margin-bottom: 16px;
+}
+
+.teste{
+    width: 600px;
+}
+
+.navbar{
+    padding: 0;
+}
+
+
+/* Menu */
+#logo-cabecalho{
+    height: 60px;
+}
+
+#logo-cabecalho-mobile{
+    height: 60px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color: white;
+    font-weight: bold;
+}
+
+
+
+
+/* Campos cadastrar / consultar / alterar cliente */
+.campos_cad_cli>.col-md-6{
+    padding: 0;
+    margin-top: 16px;
+    padding-right: 10px;
+}
+
+.campos_cad_cli>.col-md-3{
+    padding: 0;
+    margin-top: 16px;
+    padding-right: 10px;
+}
+
+.campos_cad_cli>.col-md-12{
+    padding: 0;
+    margin-top: 16px;
+    padding-right: 10px;
+}
+.campos_cad_cli>.col-md-6>.form-label{
+    margin: 0;
+}
+
+.campos_cad_cli>.col-md-6>.row>.col-md-12>.form-label{
+    margin: 0;
+}
+
+.campos_cad_cli>.col-md-6>.form-label{
+    margin: 0;
+}
+.campos_cad_cli>.col-md-3>.form-label{
+    margin: 0;
+}
+
+.campos_cad_cli>.col-md-12>.form-label{
+    margin: 0;
+}
+
+.campos_cad_cli>.col-md-12>{
+    margin: 36px;
+    background-color: blue;
+}
+
+
+
+
+
+/* Rodapé */
+.col_rodape{
+    margin-top: 50px;
+    display: block;
+}
+
+.col_rodape > p {
+    color: white;
+    margin-bottom: 8px;
+}
+
+.col_rodape1{
+    margin-top: 50px;
+    display: block;
+    
+}
+
+.col_rodape1 > p {
+    color: white;
+    margin-bottom: 8px;
+    
+}
