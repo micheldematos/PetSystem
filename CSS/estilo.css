@@ -92,10 +92,20 @@
     font-weight: bold;
 }
 
+/* .{
+    text-decoration: none;
+} */
 
 
 
 /* Campos cadastrar / consultar / alterar cliente */
+
+.iconePesquisar{
+    all: unset;
+    cursor: pointer;
+    outline: revert;
+}
+
 .campos_cad_cli>.col-md-6{
     padding: 0;
     margin-top: 16px;

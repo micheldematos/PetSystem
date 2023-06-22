@@ -18,7 +18,7 @@
     <!-- Barra de menu -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
       <div class="container d-flex justify-content-center">
-          <a class="navbar-brand" href="#"><img id="logo-cabecalho" src="../IMAGENS/logo.png"></a>
+          <a class="navbar-brand" href="/ProjetoWeb/public/"><img id="logo-cabecalho" src="../IMAGENS/logo.png"></a>
           <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
             <div>
                 <ul class="navbar-nav fonte-titulo">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="d-flex justify-content-between align-items-center teste">
-          <a class="" href="#" style="padding: 0;"><img id="logo-cabecalho-mobile" src="../IMAGENS/logo.png"></a>
+          <a class="" href="/ProjetoWeb/public/" style="padding: 0;"><img id="logo-cabecalho-mobile" src="../IMAGENS/logo.png"></a>
           <form class="d-flex justify-content-center" role="search">
               <button type="button" class="btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; height: 40px;">LOGIN</button>
               <button type="button" class="btn btn-dark" style="background-color: #DF322E; font-weight: bolder; height: 40px;">AGENDAR</button>
@@ -95,24 +95,19 @@
                     <div class="col-md-12 d-flexx justify-content-between align-items-center" >
                         <div class="row d-flex align-items-center">
 
-                        <form action="" method="post">
-
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" name="NomeAnimal" placeholder="Nome Do Animal"
-                                    aria-label="Recipient's username" aria-describedby="button-addon2">
-                                <input class="btn btn-outline-secondary" type="submit" id="button-addon2"></input>
-                            </div>
-                        </form>
-
-                            <div class="col">
-                                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Pesquisar" style="margin-right: 16px; min-width: 256px;">
+                        <div class="col">
+                                <form action="" method="post">
+                                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Pesquisar" style="margin-right: 16px; min-width: 256px;" name="NomeAnimal">
                             </div>
                             <div class="col" style="padding: 0;">
-                                <a href=""><img src="../IMAGENS/pesquisar.svg"></a>
-                            </div>    
+                            <button type="submit" class="iconePesquisar"><img src="../IMAGENS/pesquisar.svg"></button>
+                                </form>
+                          </div> 
+
+                               
                             
                             <div class="col" style="padding: 0;">
-                                <button type="button" class="btn btn-danger fonte-titulo-claro d-flex align-items-center btConCad" style="width: 168px; font-weight: bold; height: 40px;background-color: #DF322E; font-size: 12px; width: 112px; margin-left: 12px;">CADASTRAR ANIMAL</button>
+                                <button type="button" class="btn btn-danger d-flex align-items-center btConCad" style="width: 168px; font-weight: bold; height: 40px;background-color: #DF322E; font-size: 12px; width: 112px; margin-left: 12px;"><a href="/ProjetoWeb/public/cadC" class="fonte-titulo-claro" style="text-decoration: none;" >CADASTRAR ANIMAL</a> </button>
                             </div>
 
                         </div>
@@ -121,15 +116,12 @@
 
                         <div class="col" style="margin-top: 16px;">
                             <a href="" class="fonte-titulo" style="text-decoration: none;"><h2 class="text-break" style="text-decoration: none; font-weight: bolder; margin: 0;">Nome: <?php echo $valor->Nome?></h2></a>
-                            <p class="" style="color: #E34C48;">Consulta: <?php echo $valor->CodAnimal?></p>
+                            <p class="" style="color: #E34C48;">Código: <?php echo $valor->CodAnimal?></p>
                         </div>
 
                         <?php }?>
                         
-                    </div>                        
-                    
-                    
-                    
+                    </div>
                 </div>
             </div>
         </div>
