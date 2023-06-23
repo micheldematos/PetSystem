@@ -244,56 +244,30 @@ class SelectOptions extends Model
     }
 
     function selectOcupacaoUsuario($cod) {
-
         $con = mysqli_connect("127.0.0.1:3346", "root", "");
-
         mysqli_select_db($con, "projetoweb");
-
         $res = mysqli_query($con, "SELECT * FROM ocupacaousuario Where CodUsuario = '$cod'");
-
         while ($dados = mysqli_fetch_array($res)) {
-
             $data = $dados['Data'];
-
             $hora = $dados['Hora'];
-
-
-
-
             echo "<option value=''> $data - $hora </option>";
-
     }
 }
 
 
     function selectNomeTipoServicoUsuario($cod){
-
         $Con = mysqli_connect("127.0.0.1:3346", "root", "");
-
         mysqli_select_db($Con,"projetoweb");
-
         $res = mysqli_query($Con, "SELECT * FROM servico WHERE CodUsuario = '$cod'");
-
         while($dados = mysqli_fetch_array($res)){
-
            $codS = $dados['CodTipoServ'];
 
-           
-
            $res2 = mysqli_query($Con, "SELECT * FROM tiposervico WHERE CodTipoServ = '$codS'");
-
             while ($dados2 = mysqli_fetch_array($res2)) {
-
                 $nomeS = $dados2['NomeServico'];
-
             }
-
             echo "<option value=''>$nomeS</option>";
-
         }
-
-       
-
     }
 
 }
