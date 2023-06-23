@@ -132,12 +132,11 @@
               <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name='Tipo' value="<?php echo $valor->Tipo?>">
             </div>
           
-          <div class="col-md-12 d-flex justify-content-start align-items-center" style="margin-top: 36px; margin-bottom: 36px; padding: 0;">
-            <button type="submit" class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder; border: #DF322E;">ATUALIZAR</button> 
-            <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; margin-left: 10PX; border-color: #DF322E; color: #DF322E;">INATIVAR</button>
-            </form>
-          </div>
-
+            <div class="col-md-12 d-flex justify-content-start align-items-center" style="margin-top: 36px; margin-bottom: 36px; padding: 0;">
+              <button type="submit" class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder; border: #DF322E;">ATUALIZAR</button> 
+              <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; margin-left: 10PX; border-color: #DF322E; color: #DF322E;"><a href='/ProjetoWeb/public/IntAnimal/<?php echo $valor->CodAnimal ?>' style="text-decoration: none; color: #DF322E;">INATIVAR</a></button>
+              </form>
+            </div>
 
           <?php }?>
 
@@ -210,3 +209,4 @@
 </body>
 
 </html>
+
