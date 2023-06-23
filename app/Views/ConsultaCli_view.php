@@ -177,7 +177,7 @@
             </div>
           </div>
           
-          <?php foreach ($ConCli->getResult() as $valor) {
+          <!-- <?php foreach ($ConCli->getResult() as $valor) {
 
                 echo $valor->Nome;
 
@@ -245,7 +245,7 @@
 
                 echo "<br>";
 
-            } ?>
+            } ?> -->
         
           <div class="row">
           <p class="text-center" style="color: white; font-weight: 100;">© PET SYSTEM 2023. TODOS OS DIREITOS RESERVADOS</p>
