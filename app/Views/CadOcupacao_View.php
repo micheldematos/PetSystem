@@ -25,8 +25,17 @@
     use App\Models\SelectOptions;
 
     if ($session->get("Tipo") == "1") {
-        echo " 
-                <form action='' method='post'>
+            echo "  
+                <form action='' method='post' Style='padding-top:2vh'>
+                    <div class='input-group mb-3'>
+                        <label class='input-group-text' for='inputGroupSelect01'>Ocupações Cadastradas</label>
+                        <select class='form-select' id='inputGroupSelect01'>
+                        ";
+                        $so = new SelectOptions();
+                        $so->selectOcupacao();
+            echo "
+                        </select>
+                    </div>
                     <div class='input-group mb-3'>
                         <label class='input-group-text' for='inputGroupSelect01'>Usuário</label>
                         <select class='form-select' name='CodUsuario' id='inputGroupSelect01'>
