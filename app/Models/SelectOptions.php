@@ -270,4 +270,19 @@ class SelectOptions extends Model
         }
     }
 
+    function selectNomeClienteAnimal($cod){
+        $Con = mysqli_connect("127.0.0.1:3346", "root", "");
+        mysqli_select_db($Con,"projetoweb");
+        $res = mysqli_query($Con, "SELECT * FROM animal WHERE CodAnimal = '$cod'");
+        while($dados = mysqli_fetch_array($res)){
+           $codCli = $dados['CodCli'];
+
+            $res2 = mysqli_query($Con, "SELECT * FROM cliente WHERE CodCli = '$codCli'");
+            while ($dados2 = mysqli_fetch_array($res2)) {
+                $nome = $dados2['Nome'];   
+            }
+            echo $nome;
+        }
+    }
+
 }

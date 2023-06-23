@@ -103,8 +103,9 @@
                 <form action='' method='post'>   
                 <input type='hidden' name='CodAnimal' value='<?php echo $valor->CodAnimal?>'> <!-- Oculto  -->  
                 
+                <?php $so = new SelectOptions(); ?>
                 <p for="formGroupExampleInput" class="form-label"><strong class="fonte-titulo">Cliente</strong></p>
-                <p for="formGroupExampleInput" class="form-label fonte-titulo">Nome do cliente</p>
+                <p for="formGroupExampleInput" class="form-label fonte-titulo"><?php $so->selectNomeClienteAnimal($valor->CodAnimal) ?></p>
             </div>
 
             <div class="col-md-12">

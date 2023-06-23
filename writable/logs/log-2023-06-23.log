@@ -131,3 +131,14 @@ INFO - 2023-06-23 19:55:36 --> Session: Class initialized using 'CodeIgniter\Ses
 =======
 >>>>>>> 645d065b526889593aa9a0a43a6402045b4fab95
 >>>>>>> e44e2187338f2eae1d9de567a451cf83cd40bcd4
+CRITICAL - 2023-06-23 20:16:08 --> Undefined variable $so
+in APPPATH\Views\AlterarAnimal_View.php on line 107.
+ 1 APPPATH\Views\AlterarAnimal_View.php(107): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $so', 'C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\AlterarAnimal_View.php', 107)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\AlterarAnimal_View.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('AlterarAnimal_View', [], true)
+ 5 APPPATH\Controllers\Dados.php(451): view('AlterarAnimal_View', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->alterarAnimal('2')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
