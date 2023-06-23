@@ -18,7 +18,7 @@
     <!-- Barra de menu -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
       <div class="container d-flex justify-content-center">
-          <a class="navbar-brand" href="/ProjetoWeb/public/"><img id="logo-cabecalho" src="../IMAGENS/logo.png"></a>
+          <a class="navbar-brand" href="/ProjetoWeb/public/"><img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>"></a>
           <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
             <div>
                 <ul class="navbar-nav fonte-titulo">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="d-flex justify-content-between align-items-center teste">
-          <a class="" href="/ProjetoWeb/public/" style="padding: 0;"><img id="logo-cabecalho-mobile" src="../IMAGENS/logo.png"></a>
+          <a class="" href="/ProjetoWeb/public/" style="padding: 0;"><img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>"></a>
           <form class="d-flex justify-content-center" role="search">
               <button type="button" class="btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; height: 40px;">LOGIN</button>
               <button type="button" class="btn btn-dark" style="background-color: #DF322E; font-weight: bolder; height: 40px;">AGENDAR</button>
@@ -115,7 +115,7 @@
                         <?php use App\Models\SelectOptions; $so = new SelectOptions(); foreach ($ConAnimais->getResult() as $valor) {?>
 
                         <div class="col" style="margin-top: 16px;">
-                            <a href="" class="fonte-titulo" style="text-decoration: none;"><h2 class="text-break" style="text-decoration: none; font-weight: bolder; margin: 0;">Nome: <?php echo $valor->Nome?></h2></a>
+                            <a href="/ProjetoWeb/public/AltAnimal/<?php echo $valor->CodAnimal?>" class="fonte-titulo" style="text-decoration: none;"><h2 class="text-break" style="text-decoration: none; font-weight: bolder; margin: 0;">Nome: <?php echo $valor->Nome?></h2></a>
                             <p class="" style="color: #E34C48;">Código: <?php echo $valor->CodAnimal?></p>
                         </div>
 

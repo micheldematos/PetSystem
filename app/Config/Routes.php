@@ -37,20 +37,20 @@ $routes->get('/', 'Home::index');
 $routes->get("ConAdm", "Dados::telaConsultaAdm");
 
 // Animal
-$routes->get("ConAnimal", "Dados::consultaAnimais");
-$routes->post("ConAnimal", "Dados::consultaAnimais2");
-$routes->get("cadA", "Dados::cadastrarAnimal");
-$routes->post("CadA2", "Dados::cadastrarAnimal2");
+$routes->get("ConAnimal", "Dados::consultaAnimais"); // Front-end OK
+$routes->post("ConAnimal", "Dados::consultaAnimais2"); // Front-end OK
+$routes->get("cadA", "Dados::cadastrarAnimal"); // Fazer tela de cadastro de animal
+$routes->post("CadA2", "Dados::cadastrarAnimal2"); // Fazer tela de cadastro de animal
 
-$routes->get("AltAnimal/(:num)", "Dados::alterarAnimal/$1");
-$routes->post("AltAnimal/(:num)", "Dados::alterarAnimal2/$1");
-$routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1");
+$routes->get("AltAnimal/(:num)", "Dados::alterarAnimal/$1"); // Front-end OK
+$routes->post("AltAnimal/(:num)", "Dados::alterarAnimal2/$1");  // Front-end OK
+$routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1"); // Verificar botão de inativar com Vitor
 
 // Agendamento
 
 // Atendimento
-$routes->get("cadAtendimento", "Dados::cadastrarAtendimento");
-$routes->post("cadAtendimento", "Dados::cadastrarAtendimento2");
+$routes->get("cadAtendimento", "Dados::cadastrarAtendimento"); // Fazer tela de cadastro de atendimento
+$routes->post("cadAtendimento", "Dados::cadastrarAtendimento2"); // Fazer tela de cadastro de atendimento
 $routes->get("ConAtendimento", "Dados::consultaAtendimento");
 $routes->post("ConAtendimento", "Dados::consultaAtendimento2");
 $routes->get("removeAtendimento/(:num)", "Dados::removerAtendimento/$1");
