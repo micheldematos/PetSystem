@@ -114,7 +114,7 @@
                         <?php use App\Models\SelectOptions; $so = new SelectOptions(); foreach ($ConCli->getResult() as $valor) {?>
 
                         <div class="col" style="margin-top: 16px;">
-                            <a href="" class="fonte-titulo" style="text-decoration: none;"><h2 class="text-break" style="text-decoration: none; font-weight: bolder; margin: 0;">Nome: <?php echo $valor->Nome?></h2></a>
+                            <a href="/ProjetoWeb/public/AltCliente/<?php echo $valor->CodCli?>" class="fonte-titulo" style="text-decoration: none;"><h2 class="text-break" style="text-decoration: none; font-weight: bolder; margin: 0;">Nome: <?php echo $valor->Nome?></h2></a>
                             <p class="" style="color: #E34C48;">Código: <?php echo $valor->CodCli?></p>
                         </div>
 

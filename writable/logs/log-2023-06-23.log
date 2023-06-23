@@ -17,3 +17,36 @@ INFO - 2023-06-23 16:16:54 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2023-06-23 16:17:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-23 16:29:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-23 16:31:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-23 17:30:11 --> Undefined property: stdClass::$CodAnimal
+in APPPATH\Views\ConsultaCli_view.php on line 117.
+ 1 APPPATH\Views\ConsultaCli_view.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$CodAnimal', 'C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\ConsultaCli_view.php', 117)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\ConsultaCli_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ConsultaCli_View', [], true)
+ 5 APPPATH\Controllers\Dados.php(267): view('ConsultaCli_View', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->consultaCli()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 17:30:19 --> Undefined property: stdClass::$CodCliente
+in APPPATH\Views\ConsultaCli_view.php on line 117.
+ 1 APPPATH\Views\ConsultaCli_view.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$CodCliente', 'C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\ConsultaCli_view.php', 117)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\ConsultaCli_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ConsultaCli_View', [], true)
+ 5 APPPATH\Controllers\Dados.php(267): view('ConsultaCli_View', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->consultaCli()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-23 17:30:31 --> Undefined property: stdClass::$CodCliente
+in APPPATH\Views\ConsultaCli_view.php on line 117.
+ 1 APPPATH\Views\ConsultaCli_view.php(117): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$CodCliente', 'C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\ConsultaCli_view.php', 117)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\ConsultaCli_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('ConsultaCli_View', [], true)
+ 5 APPPATH\Controllers\Dados.php(267): view('ConsultaCli_View', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->consultaCli()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
