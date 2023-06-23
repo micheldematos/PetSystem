@@ -95,7 +95,7 @@
 
             <div class="row col-md-6 d-flex justify-content-between align-items-center campos_cad_cli">
             
-            <h2 class="fonte-titulo text-break" style="font-size: 32px; font-weight: bold; margin: 0; padding: 0;">Nome do animal (<?php echo $valor->CodAnimal?>)</h2><br>
+            <h2 class="fonte-titulo text-break" style="font-size: 32px; font-weight: bold; margin: 0; padding: 0;"><?php echo $valor->Nome?> (<?php echo $valor->CodAnimal?>)</h2><br>
             
            
             
