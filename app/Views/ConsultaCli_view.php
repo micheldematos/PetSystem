@@ -18,7 +18,7 @@
     <!-- Barra de menu -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
       <div class="container d-flex justify-content-center">
-          <a class="navbar-brand" href="#"><img id="logo-cabecalho" src="../IMAGENS/logo.png"></a>
+          <a class="navbar-brand" href="#"><img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>"></a>
           <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
             <div>
                 <ul class="navbar-nav fonte-titulo">
@@ -71,7 +71,7 @@
         </div>
 
         <div class="d-flex justify-content-between align-items-center teste">
-          <a class="" href="#" style="padding: 0;"><img id="logo-cabecalho-mobile" src="../IMAGENS/logo.png"></a>
+          <a class="" href="#" style="padding: 0;"><img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>"></a>
           <form class="d-flex justify-content-center" role="search">
               <button type="button" class="btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; height: 40px;">LOGIN</button>
               <button type="button" class="btn btn-dark" style="background-color: #DF322E; font-weight: bolder; height: 40px;">AGENDAR</button>
@@ -101,7 +101,7 @@
                                 <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Pesquisar" style="margin-right: 16px; min-width: 256px;" name="NomeCli">
                             </div>
                             <div class="col" style="padding: 0;">
-                            <button type="submit" class="iconePesquisar"><img src="../IMAGENS/pesquisar.svg"></button>
+                            <button type="submit" class="iconePesquisar"><img src="<?php echo base_url("/IMAGENS/pesquisar.svg") ?>"></button>
                                 </form>
                             </div> 
 
@@ -136,21 +136,21 @@
         <div class="row">
 
           <div class="col d-flex align-items-center justify-content-center" style="margin-top: 32px;">
-            <img src="../IMAGENS/logo.png" class="d-block" style="width: 200px;">
+            <img src="<?php echo base_url("/IMAGENS/logo.png") ?>" class="d-block" style="width: 200px;">
           </div>
 
           <div class="col col_rodape1">
             <h5 class="fonte-titulo" style="font-weight: bolder; color: white;">Contatos</h5>
-            <p class="fonte-titulo"><img src="../IMAGENS/telefone.svg"> (19) 9999-9999</p>
-            <p class="fonte-titulo"><img src="../IMAGENS/whatsapp.svg"> (19) 9999-9999</p>
-            <p class="fonte-titulo"><img src="../IMAGENS/email.svg"> contato@bobbarbershop.com.br</p>
+            <p class="fonte-titulo"><img src="<?php echo base_url("/IMAGENS/telefone.svg") ?>"> (19) 9999-9999</p>
+            <p class="fonte-titulo"><img src="<?php echo base_url("/IMAGENS/whatsapp.svg") ?>"> (19) 9999-9999</p>
+            <p class="fonte-titulo"><img src="<?php echo base_url("/IMAGENS/email.svg") ?>"> contato@bobbarbershop.com.br</p>
           </div>
 
           <div class="col col_rodape1">
             <h5 class="fonte-titulo" style="font-weight: bolder; color: white;">Localização</h5>
-            <p><img src="../IMAGENS/endereco.svg">  Rua 10, Av. 12, Centro - Rio Claro - SP</p>
+            <p><img src="<?php echo base_url("/IMAGENS/endereco.svg") ?>">  Rua 10, Av. 12, Centro - Rio Claro - SP</p>
             <h5 class="fonte-titulo" style="font-weight: bolder; color: white;">Redes Sociais</h5>
-            <p><img src="../IMAGENS/facebook.svg"> <img src="../IMAGENS/instagram.svg"></p>
+            <p><img src="<?php echo base_url("/IMAGENS/facebook.svg") ?>"> <img src="<?php echo base_url("/IMAGENS/instagram.svg") ?>"></p>
           </div>
 
           <div class="col col_rodape1">

@@ -12,7 +12,7 @@
     <section class="row">
       
         <div class="col-md-5 img_home" style="overflow: hidden; padding: 0;">
-            <img src="../IMAGENS/cachorro_01.jpg" style="height: 100vh;">
+            <img src="<?php echo base_url("/IMAGENS/cachorro_01.jpg") ?>" style="height: 100vh;">
         </div>
         
         <div class="col d-flex justify-content-center" style="height: 100vh;">
@@ -29,7 +29,7 @@
                 
 
                   <div class="col d-flex justify-content-center" style="padding: 0;">
-                    <img src="../IMAGENS/logo.png" style="height: 100px;" class="logo_home">
+                    <img src="<?php echo base_url("/IMAGENS/logo.png") ?>" style="height: 100px;" class="logo_home">
                   </div>
                 
                   <h2 class="fonte-titulo text-center" style="font-size: 32px; font-weight: bold; padding-top: 30px;padding-bottom:30px">Fazer Login (Cliente)</h2>

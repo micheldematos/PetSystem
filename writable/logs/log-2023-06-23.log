@@ -7,3 +7,5 @@ INFO - 2023-06-23 13:56:42 --> Session: Class initialized using 'CodeIgniter\Ses
 CRITICAL - 2023-06-23 14:16:29 --> Cannot use App\Models\SelectOptions as SelectOptions because the name is already in use
 in APPPATH\Views\AlterarAnimal_View.php on line 141.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2023-06-23 14:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-23 14:56:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

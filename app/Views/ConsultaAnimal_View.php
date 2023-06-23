@@ -100,7 +100,7 @@
                                 <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Pesquisar" style="margin-right: 16px; min-width: 256px;" name="NomeAnimal">
                             </div>
                             <div class="col" style="padding: 0;">
-                            <button type="submit" class="iconePesquisar"><img src="../IMAGENS/pesquisar.svg"></button>
+                            <button type="submit" class="iconePesquisar"><img src="<?php echo base_url("/IMAGENS/pesquisar.svg") ?>"></button>
                                 </form>
                           </div> 
 
@@ -134,21 +134,21 @@
         <div class="row">
 
           <div class="col d-flex align-items-center justify-content-center" style="margin-top: 32px;">
-            <img src="../IMAGENS/logo.png" class="d-block" style="width: 200px;">
+            <img src="<?php echo base_url("/IMAGENS/logo.png") ?>" class="d-block" style="width: 200px;">
           </div>
 
           <div class="col col_rodape1">
             <h5 class="fonte-titulo" style="font-weight: bolder; color: white;">Contatos</h5>
-            <p class="fonte-titulo"><img src="../IMAGENS/telefone.svg"> (19) 9999-9999</p>
-            <p class="fonte-titulo"><img src="../IMAGENS/whatsapp.svg"> (19) 9999-9999</p>
-            <p class="fonte-titulo"><img src="../IMAGENS/email.svg"> contato@bobbarbershop.com.br</p>
+            <p class="fonte-titulo"><img src="<?php echo base_url("/IMAGENS/telefone.svg") ?>"> (19) 9999-9999</p>
+            <p class="fonte-titulo"><img src="<?php echo base_url("/IMAGENS/whatsapp.svg") ?>"> (19) 9999-9999</p>
+            <p class="fonte-titulo"><img src="<?php echo base_url("/IMAGENS/email.svg") ?>"> contato@bobbarbershop.com.br</p>
           </div>
 
           <div class="col col_rodape1">
             <h5 class="fonte-titulo" style="font-weight: bolder; color: white;">Localização</h5>
-            <p><img src="../IMAGENS/endereco.svg">  Rua 10, Av. 12, Centro - Rio Claro - SP</p>
+            <p><img src="<?php echo base_url("/IMAGENS/endereco.svg") ?>">  Rua 10, Av. 12, Centro - Rio Claro - SP</p>
             <h5 class="fonte-titulo" style="font-weight: bolder; color: white;">Redes Sociais</h5>
-            <p><img src="../IMAGENS/facebook.svg"> <img src="../IMAGENS/instagram.svg"></p>
+            <p><img src="../IMAGENS/facebook.svg"> <img src="<?php echo base_url("/IMAGENS/instagram.svg") ?>"></p>
           </div>
 
           <div class="col col_rodape1">
