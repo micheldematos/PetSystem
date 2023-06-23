@@ -120,6 +120,54 @@
                         </div>
 
                         <?php }?>
+
+                        <?php
+                        foreach ($ConAnimais->getResult() as $valor) {
+
+                          echo $valor->Nome;
+         
+                          echo "<br>";
+         
+                          echo "Tipo: ", $valor->Tipo;
+         
+                          echo "<br>";
+         
+                          echo "Raça: ", $valor->Raca;
+         
+                          echo "<br>";
+         
+                          echo "Idade: ", $valor->Idade;
+         
+                          echo "<br>";
+         
+                          echo "Situação: ", $so->selectSituacao($valor->Situacao);
+         
+                          echo "<br>";
+         
+                          echo "Data adoção: ", $valor->Data_Adocao;
+         
+                          echo "<br>";
+         
+                          echo "Dono: ", $so->SelectCliente($valor->CodCli);
+         
+                          echo "<br>";
+         
+                          echo "<a href='/ProjetoWeb/public/AltAnimal/$valor->CodAnimal'>Alterar</a>";
+         
+                          echo "<br>";
+         
+                          echo "<a href='/ProjetoWeb/public/IntAnimal/$valor->CodAnimal'>Inativar</a>";
+         
+                          echo " / ";
+         
+                          echo "<a href='/ProjetoWeb/public/AtivAnimal/$valor->CodAnimal'>Ativar</a>";
+         
+                          echo "<br>";
+         
+                          echo "<br>";
+         
+                      }
+                        ?>
                         
                     </div>
                 </div>

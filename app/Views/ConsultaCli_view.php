@@ -119,6 +119,8 @@
                         </div>
 
                         <?php }?>
+
+                        
                         
                     </div>                        
                     
@@ -175,6 +177,75 @@
             </div>
           </div>
           
+          <?php foreach ($ConCli->getResult() as $valor) {
+
+                echo $valor->Nome;
+
+                echo "<br>";
+
+                echo "Email: ", $valor->E_mail;
+
+                echo "<br>";
+
+                echo "Siruação: ", $so->selectSituacao($valor->Situacao);
+
+                echo "<br>";
+
+                echo "CPF: ", $valor->CPF;
+
+                echo "<br>";
+
+                echo "Fone Residencial: ", $valor->FoneRes;
+
+                echo "<br>";
+
+                echo "Fone Comercial: ", $valor->FoneCom;
+
+                echo "<br>";
+
+                echo "Celular: ", $valor->Celular;
+
+                echo "<br>";
+
+                echo "Cidade: ", $valor->Cidade;
+
+                echo "<br>";
+
+                echo "Número: ", $valor->Numero;
+
+                echo "<br>";
+
+                echo "Estado: ", $valor->Estado;
+
+                echo "<br>";
+
+                echo "Complemento: ", $valor->Complemento;
+
+                echo "<br>";
+
+                echo "CEP: ", $valor->CEP;
+
+                echo "<br>";
+
+                echo "Logradouro:", $valor->Logradouro;
+
+                echo "<br>";
+
+                echo "<a href='/ProjetoWeb/public/AltCliente/$valor->CodCli'>Alterar</a>";
+
+                echo "<br>";
+
+                echo "<a href='/ProjetoWeb/public/IntCliente/$valor->CodCli'>Inativar</a>";
+
+                echo " / ";
+
+                echo "<a href='/ProjetoWeb/public/AtivCliente/$valor->CodCli'>Ativar</a>";
+
+                echo "<br>";
+
+                echo "<br>";
+
+            } ?>
         
           <div class="row">
           <p class="text-center" style="color: white; font-weight: 100;">© PET SYSTEM 2023. TODOS OS DIREITOS RESERVADOS</p>

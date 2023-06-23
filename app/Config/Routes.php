@@ -24,6 +24,8 @@ $routes->post("CadA2", "Dados::cadastrarAnimal2");
 $routes->get("AltAnimal/(:num)", "Dados::alterarAnimal/$1");
 $routes->post("AltAnimal/(:num)", "Dados::alterarAnimal2/$1");
 $routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1");
+$routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1");
+$routes->get("AtivAnimal/(:num)", "Dados::ativarAnimais/$1");
 
 // Agendamento
 
@@ -44,6 +46,8 @@ $routes->get("ConCli", "Dados::consultaCli");
 $routes->post("ConCli", "Dados::consultaCli2"); 
 $routes->get("AltCliente/(:num)", "Dados::alterarCliente/$1"); 
 $routes->post("AltCliente/(:num)", "Dados::alterarCliente2"); 
+$routes->get("IntCliente/(:num)", "Dados::inativarCliente/$1");
+$routes->get("AtivCliente/(:num)", "Dados::ativarCliente/$1");
 
 // Login
 $routes->post("LoginFC", "Dados::loginCli2"); 
@@ -89,6 +93,8 @@ $routes->get("ConUsuario", "Dados::consultaUsuario");
 $routes->post("ConUsuario", "Dados::consultaUsuario2"); 
 $routes->get("AltUsuario/(:num)", "Dados::alterarUsuario/$1"); 
 $routes->post("AltUsuario/(:num)", "Dados::alterarUsuario2/$1"); 
+$routes->get("IntUsuario/(:num)", "Dados::inativarUsuario/$1");
+$routes->get("AtivUsuario/(:num)", "Dados::ativarUsuario/$1");
 
 
 if (is_file(APPPATH . 'Config/' . ENVIRONMENT . '/Routes.php')) {

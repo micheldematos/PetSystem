@@ -6,7 +6,7 @@ use CodeIgniter\Model;
 
 class Banco_Query extends Model {
 
-     //////////////////////////////////////////// Cadastro ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CADASTRO
     function cadastrarCliente($Nome, $Senha, $E_mail, $Situacao, $CPF, $FoneRes, $FoneCom, $Celular, $Cidade, $Número, $Estado, $Complemento, $CEP, $Logradouro) {
         $this->db->query("INSERT INTO `cliente` (`Nome`, `Senha`, `E_mail`, `Situacao`, `CPF`, `FoneRes`, `FoneCom`, `Celular`, `Cidade`, `Numero`, `Estado`, `Complemento`, `CEP`, `Logradouro`) VALUES ('$Nome', '$Senha',"
                 . " '$E_mail', '$Situacao', '$CPF', '$FoneRes', '$FoneCom', '$Celular', '$Cidade', '$Número', '$Estado',"
@@ -46,7 +46,7 @@ class Banco_Query extends Model {
         VALUES ('$Preco', '$Observacoes', '$ServicoRealizado', '$CodAnimal', '$CodServico', '$CodOcupacao')");
     }
 
-     //////////////////////////////////////////// Consulta ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CONSULTA
     function consultaCli($nome){
         return $this->db->query("SELECT * FROM cliente WHERE Nome LIKE '$nome%'");
     }
@@ -83,7 +83,7 @@ class Banco_Query extends Model {
         return $this->db->query("SELECT * FROM atendimento WHERE CodAnimal LIKE '$cod%'");
     }
 
-    //////////////////////////////////////////// Remoção ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// REMOÇÃO
     function removerOcupacao($cod){
         return $this->db->query("DELETE FROM ocupacaousuario WHERE `ocupacaousuario`.`CodOcupacao`= '$cod'");
     }
@@ -96,7 +96,7 @@ class Banco_Query extends Model {
         return $this->db->query("DELETE FROM atendimento WHERE CodAtendimento = '$cod'");
     }
 
-    //////////////////////////////////////////// Alteração ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ALTERAÇÃO
     function consultaCliAlteracao($cod){
         return $this->db->query("SELECT * FROM cliente WHERE CodCli = '$cod'");
     }
@@ -204,10 +204,39 @@ class Banco_Query extends Model {
         WHERE CodAtendimento = '$cod'");
     }
 
-    //////////////////////////////////////////// Inativação ////////////////////////////////////////////
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// INATIVAÇÃO
     function inativarAnimais($cod){
         return $this->db->query("CALL sp_inativaranimal('$cod')");
     }
+    
+    function inativarCliente($cod){
+        return $this->db->query("CALL sp_inativarcliente('$cod')");
+    }
+    
+    function inativarUsuario($cod){
+        return $this->db->query("CALL sp_inativarusuario('$cod')");
+    }
+
+
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ATIVAÇÃO
+    function ativarAnimais($cod){
+        return $this->db->query("CALL sp_ativaranimal('$cod')");
+    }
+    
+    function ativarCliente($cod){
+        return $this->db->query("CALL sp_ativarcliente('$cod')");
+    }
+    
+    function ativarUsuario($cod){
+        return $this->db->query("CALL sp_ativarusuario('$cod')");
+    }
+
+
+
 
 }
+
+

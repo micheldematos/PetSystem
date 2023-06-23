@@ -51,6 +51,56 @@
                  echo "<br>";
                  echo "<br>";
              }
+
+             foreach ($ConUsuario->getResult() as $valor) {
+
+                echo $valor->Nome;
+
+                echo "<br>";
+
+                echo "E_mail: ", $valor->E_mail;
+
+                echo "<br>";
+
+                echo "CPF: ", $valor->CPF;
+
+                echo "<br>";
+
+                echo "Função: ", $so->selectFuncaoUsuario($valor->Funcao);
+
+                echo "<br>";
+
+                echo "Tipo: ", $so->selectTipoUsuario($valor->Tipo);
+
+                echo "<br>";
+
+                echo "Situação: ", $so->selectSituacao($valor->Situacao);
+
+                echo "<br>";
+
+                echo "Data admissão: ", $valor->Data_Admissao;
+
+                echo "<br>";
+
+                echo "Celular: ", $valor->Celular;
+
+                echo "<br>";
+
+                echo "<a href='/ProjetoWeb/public/AltUsuario/$valor->CodUsuario'>Alterar</a>";
+
+                echo "<br>";
+
+                echo "<a href='/ProjetoWeb/public/IntUsuario/$valor->CodUsuario'>Inativar</a>";
+
+                echo " / ";
+
+                echo "<a href='/ProjetoWeb/public/AtivUsuario/$valor->CodUsuario'>Ativar</a>";
+
+                echo "<br>";
+
+                echo "<br>";
+
+            }
             ?>
         </div>
     </main>

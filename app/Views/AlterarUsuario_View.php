@@ -54,6 +54,42 @@ use App\Models\SelectOptions;
                                 <input type='text' class='form-control' name='Celular' value='$valor->Celular' aria-describedby='inputGroup-sizing-default'>
                             </div>
 
+                            <a href='/ProjetoWeb/public/cadOcupacao'>Cadastrar Ocupação</a>
+
+                            <div class='input-group mb-3'>
+
+                                <label class='input-group-text' for='inputGroupSelect01'>Ocupação Usuário</label>
+
+                                <select class='form-select' id='inputGroupSelect01' name='Situacao'>";
+
+                                    $so = new SelectOptions();
+
+                                    $so->selectOcupacaoUsuario($valor->CodUsuario); echo"
+
+                                </select>
+
+                            </div>
+
+
+
+
+                           
+
+                            <a href='/ProjetoWeb/public/cadServico'>Cadastrar Serviço</a>
+
+                            <div class='input-group mb-3'>
+
+                                <label class='input-group-text' for='inputGroupSelect01'>Serviço Atribuído</label>
+
+                                <select class='form-select' id='inputGroupSelect01' name='Situacao'>";
+
+                                    $so->selectNomeTipoServicoUsuario($valor->CodUsuario); echo"
+
+                                </select>
+
+                            </div>
+                            
+
                             Função Cadastrada: 
                             ";
                             $so = new SelectOptions();

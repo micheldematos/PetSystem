@@ -13,7 +13,7 @@ use CodeIgniter\Controller;
 class Dados extends BaseController
 {
 
-    //////////////////////////////////////////// Cadastro ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CADASTRO
     function cadastrarC()
     {
         return view("CadCli_View");
@@ -254,7 +254,7 @@ class Dados extends BaseController
         return view("Home_View");
     }
 
-    //////////////////////////////////////////// Consulta ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CONSULTA
     function telaConsultaAdm()
     {
         return view("ConsultaAdm");
@@ -387,7 +387,7 @@ class Dados extends BaseController
         return view("ConsultaAtendimento_View", $data);
     }
 
-    //////////////////////////////////////////// Remoção ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// REMOÇÃO
     function removerOcupacao($cod){
         $bq = new Banco_Query();
         $bq->removerOcupacao($cod);
@@ -412,19 +412,10 @@ class Dados extends BaseController
         return view("ConsultaAtendimento_View",$data);
     }
 
-    //////////////////////////////////////////// Inativar ////////////////////////////////////////////
-
-    function inativarAnimais($cod){
-        $bq = new Banco_Query();
-        $bq->inativarAnimais($cod);
-
-        $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
-        return view("ConsultaAnimal_View", $data);
-    }
 
 
     
-    //////////////////////////////////////////// Alteração ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ALTERAÇÃO
     function alterarCliente($cod){
         $bq = new Banco_Query();
         $data['ConCli'] = $bq->consultaCliAlteracao($cod);
@@ -587,7 +578,7 @@ class Dados extends BaseController
         return view("ConsultaAtendimento_View", $data);
     }
 
-    //////////////////////////////////////////// Login e Logout ////////////////////////////////////////////
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LOGIN / LOGOUT
     function loginCli2()
     { {
             // Carrega o helper de formulários e validação
@@ -742,11 +733,56 @@ class Dados extends BaseController
 
         }
     }
-    function logout()
-    {
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LOGOUT
+    function logout(){
         $session = session();
         // session_destroy();
         $session->destroy();
         return view("Home_View");
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// INATIVAR
+    function inativarAnimais($cod){
+        $bq = new Banco_Query();
+        $bq->inativarAnimais($cod);
+        $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+        return view("ConsultaAnimal_View", $data);
+    }
+    
+    function inativarCliente($cod){
+        $bq = new Banco_Query();
+        $bq->inativarCliente($cod);
+        $data['ConCli'] = $bq->consultaCli($this->request->getPost("NomeCli"));
+        return view("ConsultaCli_View", $data);
+    }
+    
+    function inativarUsuario($cod){
+        $bq = new Banco_Query();
+        $bq->inativarUsuario($cod);
+        $data['ConUsuario'] = $bq->consultaUsuario($this->request->getPost("NomeUsuario"));
+        return view("ConsultaUsuario_View", $data);
+    }
+    
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ATIVAR
+    function ativarAnimais($cod){
+        $bq = new Banco_Query();
+        $bq->ativarAnimais($cod);
+        $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+        return view("ConsultaAnimal_View", $data);
+    }
+    
+    function ativarCliente($cod){
+        $bq = new Banco_Query();
+        $bq->ativarCliente($cod);
+        $data['ConCli'] = $bq->consultaCli($this->request->getPost("NomeCli"));
+        return view("ConsultaCli_View", $data);
+    }
+    
+    function ativarUsuario($cod){
+        $bq = new Banco_Query();
+        $bq->ativarUsuario($cod);
+        $data['ConUsuario'] = $bq->consultaUsuario($this->request->getPost("NomeUsuario"));
+        return view("ConsultaUsuario_View", $data);
     }
 }
