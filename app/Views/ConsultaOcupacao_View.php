@@ -41,8 +41,6 @@
                  echo "<br>";
                  echo "<a href='/ProjetoWeb/public/AltOcupacao/$valor->CodOcupacao'>Alterar</a>";
                  echo "<br>";
-                 echo "<a href='/ProjetoWeb/public/removeOcupacao/$valor->CodOcupacao'>Remover</a>";
-                 echo "<br>";
                  echo "<br>";
              }
             ?>
