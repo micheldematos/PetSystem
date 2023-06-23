@@ -61,6 +61,10 @@
                         <button type="button" class="btn btn-danger" style="width: 100%; font-weight: bold;"><a class="fonte-titulo-claro" href="/ProjetoWeb/public/cadC" style="text-decoration: none;">CADASTRE-SE</a></button>  
                         </form>                                            
                     </div>
+                  </div>      
+
+                  <div class="row mb-3">
+                    <p>Se você é usuário, <a href="/ProjetoWeb/public/LoginU">clique aqui</a></p>
                   </div>       
             </div>
         </div>
