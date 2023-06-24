@@ -84,17 +84,22 @@
     </nav>
     
     <!-- Conteúdo da página -->
-    <div class="container" style="padding-top: 150px; min-height: 100vh;">
+    <div class="container" style="padding-top: 100px; min-height: 100vh;">
       
       <div class="d-flex justify-content-between">
+      
+      <?php use App\Models\SelectOptions; $so = new SelectOptions();foreach ($ConCli->getResult() as $valor){ ?>
+        
 
         <div class="container d-flex justify-content-between">
           <div class="row d-flex justify-content-between campos_cad_cli">
-            <h2 class="fonte-titulo text-break" style="font-size: 32px; font-weight: bold; margin: 0; padding: 0;">Nome do cliente</h2><br>
+            <h2 class="fonte-titulo text-break" style="font-size: 32px; font-weight: bold; margin: 0; padding: 0;"><?php echo $valor->Nome ?></h2><br>
             
-            <div class="col-md-6">                        
+            <div class="col-md-6">
+                <form action='' method='post'>    <!-- Form --> 
+                <input type='hidden' class='form-control' name='CodCli' value='<?php echo $valor->CodCli ?> ' aria-describedby='inputGroup-sizing-default'>                  
                 <label for="formGroupExampleInput" class="form-label"><strong class="fonte-titulo">Nome Completo</strong></label>
-                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Nome Completo">
+                <input type="text" class="form-control fonte-titulo" name='Nome' id="formGroupExampleInput" value="<?php echo $valor->Nome ?>">
             </div>
 
             <div class="col-md-6">
@@ -113,54 +118,55 @@
 
             <div class="col-md-3">
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">CPF</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="xxx.xxx.xxx-xx">
+              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name='CPF' value='<?php echo $valor->CPF?>'>
             </div>
 
             <div class="col-md-3">
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Celular</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="(xx) xxxxx-xxxx">
+              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name='Celular' value='<?php echo $valor->Celular?>'>
             </div>
             
             <div class="col-md-3">
-              <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Telefone</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="(xx) xxxxx-xxxx">
+              <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Telefone residencial</strong></label>
+              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2"  name='FoneRes' value='<?php echo $valor->FoneRes ?>'>
             </div>
 
             <div class="col-md-3">
-                <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Contato</strong></label>
-                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="(xx) xxxxx-xxxx">
+                <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Telefone comercial</strong></label>
+                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2"name='FoneCom' value='<?php echo $valor->FoneCom ?>'>
             </div>
-
+          
             <div class="col-md-6">
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Logradouro</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Rua, Avenida, Bloco, Etc.">
+              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name='Logradouro' value='<?php echo $valor->Logradouro ?>'>
             </div>
             
             <div class="col-md-3">
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Número</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Número">
+              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name='Numero' value='<?php echo $valor->Numero ?>'>
             </div>
 
+            
             <div class="col-md-3">
                 <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Estado</strong></label>
-                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Estado">
+                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name='Estado' value='<?php echo $valor->Estado ?>'>
             </div>
-
+            
             <div class="col-md-6">
                 <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">CEP</strong></label>
-                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="xxxxx-xxx">
+                <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name='CEP' value='<?php echo $valor->CEP ?>'>
               </div>
-
+            
             <div class="col-md-6">
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Complemento</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Complemento">
+              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name='Complemento' value='<?php echo $valor->Complemento ?>'>
             </div>
             
             
-
+            
             <div class="col-md-6">                        
               <label for="formGroupExampleInput" class="form-label"><strong class="fonte-titulo">E-mail</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="E-mail">
+              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" name='E_mail' value='<?php echo $valor->E_mail ?>'>
           </div>
 
           <div class="col-md-6">                        
@@ -168,10 +174,15 @@
             <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Senha">
           </div>
           
+          
           <div class="col-md-12 d-flex justify-content-start align-items-center" style="margin-top: 36px; margin-bottom: 36px; padding: 0;">
-            <button type="button" class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder; border: #DF322E;">ATUALIZAR</button> 
-            <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; margin-left: 10PX; border-color: #DF322E; color: #DF322E;">LOGIN</button>
+            <button class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder; border: #DF322E;" type='submit' value='Alterar'>ATUALIZAR</button> 
+            <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; margin-left: 10PX; border-color: #DF322E; color: #DF322E;"><a href='/ProjetoWeb/public/IntCliente/<?php echo $valor->CodCli ?>' style="text-decoration: none; color: #DF322E;">INATIVAR</a></button>
+            </form>"
           </div>
+
+          <?php } ?>
+          
 
           </div>
         </div>
@@ -260,7 +271,7 @@
         </header>
         <div id="sec1" class="container" style="margin-top: 3vh;">
             <?php
-            use App\Models\SelectOptions;
+            use App\Models\SelectOptionss;
             $so = new SelectOptions();
             foreach ($ConCli->getResult() as $valor) {
                 echo "
