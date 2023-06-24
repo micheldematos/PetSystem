@@ -42,6 +42,18 @@ class SelectOptions extends Model
         
     }
 
+    function SelectTipoServicoOptions(){
+        $Con = mysqli_connect("127.0.0.1:3346", "root", "");
+        mysqli_select_db($Con,"projetoweb");
+        $res = mysqli_query($Con, "SELECT * FROM tiposervico");
+        while($dados = mysqli_fetch_array($res)){
+           $nome = $dados['NomeServico'];
+           $preço = $dados['Preco'];
+           echo "<option value=''>$nome - $preço</option>";
+        }
+        
+    }
+
     function selectAnimal() {
         $con = mysqli_connect("127.0.0.1:3346", "root", "");
         mysqli_select_db($con, "projetoweb");
@@ -294,5 +306,7 @@ class SelectOptions extends Model
             echo $nome;
         }
     }
+
+
 
 }
