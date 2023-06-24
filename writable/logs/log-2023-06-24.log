@@ -16,3 +16,23 @@ in APPPATH\Views\AlterarCliente_View.php on line 271.
  1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
 INFO - 2023-06-24 17:31:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2023-06-24 17:36:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 17:44:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-24 18:15:32 --> Class "SelectOptions" not found
+in APPPATH\Views\AlterarUsuario_View.php on line 93.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('AlterarUsuario_View', [], true)
+ 4 APPPATH\Controllers\Dados.php(473): view('AlterarUsuario_View', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->alterarUsuario('3')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-24 18:16:21 --> syntax error, unexpected token "use"
+in APPPATH\Views\AlterarUsuario_View.php on line 93.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('AlterarUsuario_View', [], true)
+ 3 APPPATH\Controllers\Dados.php(473): view('AlterarUsuario_View', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->alterarUsuario('3')
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
