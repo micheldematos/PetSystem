@@ -105,8 +105,15 @@
             <div class="col-md-6">
                 <div class="row d-flex align-items-center">
                     <div class="col-md-12">
-                        <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Animai</strong></label>
+                        <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Animais</strong></label>
                     </div>
+                    <!-- Select Animal -->
+                    <div class='input-group mb-3'>
+                      <select class='form-select' id='inputGroupSelect01' name='Situacao'>
+                        <?php $so->selectNomeAnimalCliente($valor->CodCli) ?>
+                        </select>
+                    </div>
+                    <!--///////////////-->
                     <div class="col" style="margin: 0;">
                         <input type="text" class="form-control fonte-titulo" style="min-width: 210px; margin: 0;" id="formGroupExampleInput2" placeholder="Animais">
                     </div>
