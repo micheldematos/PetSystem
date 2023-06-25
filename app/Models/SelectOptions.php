@@ -214,10 +214,11 @@ class SelectOptions extends Model
     function selectNomeAnimalCliente($cod){
         $Con = mysqli_connect("127.0.0.1:3346", "root", "");
         mysqli_select_db($Con,"projetoweb");
-        $res = mysqli_query($Con, "SELECT Nome FROM animal WHERE CodCli = '$cod'");
+        $res = mysqli_query($Con, "SELECT * FROM animal WHERE CodCli = '$cod'");
         while($dados = mysqli_fetch_array($res)){
            $nome = $dados['Nome'];
-           echo "<option value=''>$nome</option>";
+           $cod = $dados['CodAnimal'];
+           echo "<option value=''>$cod - $nome</option>";
         }
     }
 
