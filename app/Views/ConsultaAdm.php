@@ -20,7 +20,7 @@
         <a class="link2" href="/ProjetoWeb/public/ConTipoServico">• Consulta Tipo de Serviço</a><br>
         <a class="link2" href="/ProjetoWeb/public/ConServico">• Consulta Serviço</a><br>
         <a class="link2" href="/ProjetoWeb/public/">• Consulta Horários Disp</a><br>
-        <a class="link2" href="/ProjetoWeb/public/">• Consulta Agendamento</a><br>
+        <a class="link2" href="/ProjetoWeb/public/ConAgendamento">• Consulta Agendamento</a><br>
         <a class="link2" href="/ProjetoWeb/public/ConAtendimento">• Consulta Atendimento</a>
     </div>
 </body>

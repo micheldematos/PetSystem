@@ -28,6 +28,10 @@ $routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1");
 $routes->get("AtivAnimal/(:num)", "Dados::ativarAnimais/$1");
 
 // Agendamento
+$routes->get("ConAgendamento", "Dados::consultaAgendamento");
+$routes->post("ConAgendamento", "Dados::consultaAgendamento2");
+$routes->get("AltAgendamento/(:num)", "Dados::alterarAgendamento/$1");
+$routes->post("AltAgendamento/(:num)", "Dados::alterarAgendamento2/$1");
 
 // Atendimento
 $routes->get("cadAtendimento", "Dados::cadastrarAtendimento");

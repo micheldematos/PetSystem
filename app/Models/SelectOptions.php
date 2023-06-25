@@ -221,7 +221,7 @@ class SelectOptions extends Model
         }
     }
 
-    function selectDataAtendimento($cod){
+    function selectData($cod){
         $Con = mysqli_connect("127.0.0.1:3346", "root", "");
         mysqli_select_db($Con,"projetoweb");
         $res = mysqli_query($Con, "SELECT Data FROM ocupacaousuario WHERE CodOcupacao = '$cod'");
@@ -231,7 +231,7 @@ class SelectOptions extends Model
         }
     }
 
-    function selectHoraAtendimento($cod){
+    function selectHora($cod){
         $Con = mysqli_connect("127.0.0.1:3346", "root", "");
         mysqli_select_db($Con,"projetoweb");
         $res = mysqli_query($Con, "SELECT Hora FROM ocupacaousuario WHERE CodOcupacao = '$cod'");
