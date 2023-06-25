@@ -13,7 +13,7 @@ use CodeIgniter\Controller;
 class Dados extends BaseController
 {
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CADASTRO
+    ///////////////////////////////////////////////////////////////////////////////////////// CADASTRO
     function cadastrarC()
     {
         return view("CadCli_View");
@@ -152,7 +152,7 @@ class Dados extends BaseController
             $this->request->getPost("Tipo"),
             $this->request->getPost("Raca"),
             $this->request->getPost("Idade"),
-            $this->request->getPost("Situacao"),
+            1,
             $this->request->getPost("Data_Adocao"),
             $CodCli
         );
@@ -254,7 +254,7 @@ class Dados extends BaseController
         return view("Home_View");
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CONSULTA
+    //////////////////////////////////////////////////////////////////////////////////////// CONSULTA
     function telaConsultaAdm()
     {
         return view("ConsultaAdm");
@@ -390,7 +390,7 @@ class Dados extends BaseController
         return view("ConsultaAtendimento_View", $data);
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// REMOÇÃO
+    ////////////////////////////////////////////////////////////////////////////////////////////// REMOÇÃO
     function removerOcupacao($cod){
         $bq = new Banco_Query();
         $bq->removerOcupacao($cod);
@@ -424,7 +424,7 @@ class Dados extends BaseController
     }
 
     
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ALTERAÇÃO
+    ///////////////////////////////////////////////////////////////////////////////////////// ALTERAÇÃO
     function alterarCliente($cod){
         $bq = new Banco_Query();
         $data['ConCli'] = $bq->consultaCliAlteracao($cod);
@@ -587,6 +587,7 @@ class Dados extends BaseController
         return view("ConsultaAtendimento_View", $data);
     }
 
+<<<<<<< HEAD
     function alterarAgendamento($cod){
         $bq = new Banco_Query();
         $data['ConAgendamento'] = $bq->consultaAgendamentoAlteracao($cod);
@@ -594,6 +595,9 @@ class Dados extends BaseController
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LOGIN / LOGOUT
+=======
+    ///////////////////////////////////////////////////////////////////////////////////// LOGIN / LOGOUT
+>>>>>>> 11e2f7397acc521fcbe94dbacaef518281c9e3e5
     function loginCli2()
     { {
             // Carrega o helper de formulários e validação
@@ -749,7 +753,7 @@ class Dados extends BaseController
         }
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LOGOUT
+    //////////////////////////////////////////////////////////////////////////////////////////// LOGOUT
     function logout(){
         $session = session();
         // session_destroy();
@@ -757,7 +761,7 @@ class Dados extends BaseController
         return view("Home_View");
     }
 
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// INATIVAR
+    /////////////////////////////////////////////////////////////////////////////////////////// INATIVAR
     function inativarAnimais($cod){
         $bq = new Banco_Query();
         $bq->inativarAnimais($cod);
@@ -779,7 +783,7 @@ class Dados extends BaseController
         return view("ConsultaUsuario_View", $data);
     }
     
-    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ATIVAR
+    //////////////////////////////////////////////////////////////////////////////////// ATIVAR
     function ativarAnimais($cod){
         $bq = new Banco_Query();
         $bq->ativarAnimais($cod);
@@ -800,4 +804,5 @@ class Dados extends BaseController
         $data['ConUsuario'] = $bq->consultaUsuario($this->request->getPost("NomeUsuario"));
         return view("ConsultaUsuario_View", $data);
     }
+
 }

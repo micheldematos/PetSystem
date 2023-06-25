@@ -107,21 +107,18 @@
                     <div class="col-md-12">
                         <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Animais</strong></label>
                     </div>
-                    <!-- Select Animal -->
-                    <div class='input-group mb-3'>
-                      <select class='form-select' id='inputGroupSelect01' name='Situacao'>
+                    
+                    <div class="col" style="margin: 0;">
+                    <select class='form-select fonte-titulo' id='inputGroupSelect01' name='Situacao' style="min-width: 210px; margin: 0;" >
+                      
                         <?php $so->selectNomeAnimalCliente($valor->CodCli) ?>
                         </select>
                     </div>
-                    <!--///////////////-->
                     <div class="col" style="margin: 0;">
-                        <input type="text" class="form-control fonte-titulo" style="min-width: 210px; margin: 0;" id="formGroupExampleInput2" placeholder="Animais">
-                    </div>
-                    <div class="col" style="margin: 0;">
-                        <a href="" class="fonte-titulo" style="margin: 0; width: 66px; text-decoration: none; color: #DF322E; font-weight: bold;"><p class="text-break text-center" style="margin: 0; width: 66px; font-size: 10px;">CONSULTAR <br> ANIMAL</p></a>
+                        <a href="" type="submit" class="fonte-titulo" style="margin: 0; width: 66px; text-decoration: none; color: #DF322E; font-weight: bold;"><p class="text-break text-center" style="margin: 0; width: 66px; font-size: 10px;">CONSULTAR <br> ANIMAL</p></a>
                     </div>
                 </div> 
-            </div>
+            </div> 
 
             <div class="col-md-3">
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">CPF</strong></label>
@@ -184,9 +181,17 @@
           
           <div class="col-md-12 d-flex justify-content-start align-items-center" style="margin-top: 36px; margin-bottom: 36px; padding: 0;">
             <button class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder; border: #DF322E;" type='submit' value='Alterar'>ATUALIZAR</button> 
+
+            <?php if ($valor->Situacao == "1") { ?>
             <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; margin-left: 10PX; border-color: #DF322E; color: #DF322E;"><a href='/ProjetoWeb/public/IntCliente/<?php echo $valor->CodCli ?>' style="text-decoration: none; color: #DF322E;">INATIVAR</a></button>
-            </form>"
+
+            <?php }else{?>
+              <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; margin-left: 10PX; border-color: #DF322E; color: #DF322E;"><a href='/ProjetoWeb/public/AtivCliente/<?php echo $valor->CodCli ?>' style="text-decoration: none; color: #DF322E;">ATIVAR</a></button>
+            
+              <?php } ?>
+              </form>
           </div>
+            
 
           <?php } ?>
           
