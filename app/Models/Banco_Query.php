@@ -96,6 +96,10 @@ class Banco_Query extends Model {
         return $this->db->query("DELETE FROM atendimento WHERE CodAtendimento = '$cod'");
     }
 
+    function removerTipoServico($cod){
+        return $this->db->query("DELETE FROM tiposervico WHERE CodTipoServ = '$cod'");
+    }
+
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ALTERAÇÃO
     function consultaCliAlteracao($cod){
         return $this->db->query("SELECT * FROM cliente WHERE CodCli = '$cod'");

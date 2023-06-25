@@ -412,7 +412,13 @@ class Dados extends BaseController
         return view("ConsultaAtendimento_View",$data);
     }
 
-
+    function removerTipoServico($cod){
+        $bq = new Banco_Query();
+        $bq->removerTipoServico($cod);
+        $so = new SelectOptions();
+        $data['ConTipoServico'] = $bq->consultaTipoServico($this->request->getPost("Nome"));
+        return view("ConsultaTipoServico_View", $data);
+    }
 
     
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// ALTERAÇÃO

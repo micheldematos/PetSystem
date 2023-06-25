@@ -83,6 +83,8 @@ $routes->get("cadTipoServ", "Dados::cadastrarTipoServ");
 $routes->post("cadTipoServ", "Dados::cadastrarTipoServ2"); 
 $routes->get("ConTipoServico", "Dados::consultaTipoServico"); 
 $routes->post("ConTipoServico", "Dados::consultaTipoServico2"); 
+$routes->get("removeTipoServico/(:num)", "Dados::removerTipoServico/$1"); 
+$routes->post("removeTipoServico/(:num)", "Dados::removerTipoServico/$1"); 
 $routes->get("AltTipoServico/(:num)", "Dados::alterarTipoServico/$1"); 
 $routes->post("AltTipoServico/(:num)", "Dados::alterarTipoServico2/$1"); 
 

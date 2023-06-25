@@ -36,3 +36,74 @@ in APPPATH\Views\AlterarUsuario_View.php on line 93.
  5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
  6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-24 20:14:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 20:14:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 20:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 20:14:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 20:16:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 20:16:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 20:16:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 20:16:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 20:16:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 21:09:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 21:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-06-24 21:11:03 --> Undefined variable $so
+in APPPATH\Views\AlterarTipoServico_View.php on line 31.
+ 1 APPPATH\Views\AlterarTipoServico_View.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $so', 'C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\AlterarTipoServico_View.php', 31)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\AlterarTipoServico_View.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('AlterarTipoServico_View', [], true)
+ 5 APPPATH\Controllers\Dados.php(524): view('AlterarTipoServico_View', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->alterarTipoServico('7')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-24 21:22:48 --> Undefined variable $so
+in APPPATH\Views\AlterarTipoServico_View.php on line 32.
+ 1 APPPATH\Views\AlterarTipoServico_View.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $so', 'C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\AlterarTipoServico_View.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('C:\\xampp\\htdocs\\ProjetoWeb\\app\\Views\\AlterarTipoServico_View.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('AlterarTipoServico_View', [], true)
+ 5 APPPATH\Controllers\Dados.php(524): view('AlterarTipoServico_View', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->alterarTipoServico('7')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-06-24 21:23:08 --> Class "SelectOptions" not found
+in APPPATH\Views\AlterarTipoServico_View.php on line 33.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('AlterarTipoServico_View', [], true)
+ 4 APPPATH\Controllers\Dados.php(524): view('AlterarTipoServico_View', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->alterarTipoServico('7')
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-24 21:34:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-06-24 21:34:29 --> mysqli_sql_exception: Cannot delete or update a parent row: a foreign key constraint fails (`projetoweb`.`servico`, CONSTRAINT `fk_CodTipoServ` FOREIGN KEY (`CodTipoServ`) REFERENCES `tiposervico` (`CodTipoServ`)) in C:\xampp\htdocs\ProjetoWeb\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\ProjetoWeb\system\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tip...', 0)
+#1 C:\xampp\htdocs\ProjetoWeb\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tip...')
+#2 C:\xampp\htdocs\ProjetoWeb\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tip...')
+#3 C:\xampp\htdocs\ProjetoWeb\app\Models\Banco_Query.php(100): CodeIgniter\Database\BaseConnection->query('DELETE FROM tip...')
+#4 C:\xampp\htdocs\ProjetoWeb\app\Controllers\Dados.php(417): App\Models\Banco_Query->removerTipoServico('8')
+#5 C:\xampp\htdocs\ProjetoWeb\system\CodeIgniter.php(934): App\Controllers\Dados->removerTipoServico('8')
+#6 C:\xampp\htdocs\ProjetoWeb\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+#7 C:\xampp\htdocs\ProjetoWeb\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\ProjetoWeb\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2023-06-24 21:34:29 --> Cannot delete or update a parent row: a foreign key constraint fails (`projetoweb`.`servico`, CONSTRAINT `fk_CodTipoServ` FOREIGN KEY (`CodTipoServ`) REFERENCES `tiposervico` (`CodTipoServ`))
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('DELETE FROM tiposervico WHERE CodTipoServ = \'8\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('DELETE FROM tiposervico WHERE CodTipoServ = \'8\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('DELETE FROM tiposervico WHERE CodTipoServ = \'8\'')
+ 4 APPPATH\Models\Banco_Query.php(100): CodeIgniter\Database\BaseConnection->query('DELETE FROM tiposervico WHERE CodTipoServ = \'8\'')
+ 5 APPPATH\Controllers\Dados.php(417): App\Models\Banco_Query->removerTipoServico('8')
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dados->removerTipoServico('8')
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dados))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-06-24 21:34:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 21:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 21:35:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-06-24 21:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
