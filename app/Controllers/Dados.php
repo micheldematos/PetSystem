@@ -152,7 +152,7 @@ class Dados extends BaseController
             $this->request->getPost("Tipo"),
             $this->request->getPost("Raca"),
             $this->request->getPost("Idade"),
-            $this->request->getPost("Situacao"),
+            1,
             $this->request->getPost("Data_Adocao"),
             $CodCli
         );
