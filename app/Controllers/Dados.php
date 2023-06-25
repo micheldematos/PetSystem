@@ -362,13 +362,16 @@ class Dados extends BaseController
 
     function consultaAgendamento()
     {
-        return view("ConsultaAgendamento_View");
+        $bq = new \App\Models\Banco_Query();
+        $data['ConAgendamento'] = $bq->consultaAgendamento();
+        return view("ConsultaAgendamento_View", $data);
     }
 
     function consultaAgendamento2()
-    {
+    {   
+        $so = new SelectOptions();
         $bq = new \App\Models\Banco_Query();
-        $data['ConAgendamento'] = $bq->consulta();
+        $data['ConAgendamento'] = $bq->consultaAgendamento2($so->selectCodAnimal($this->request->getPost("NomeAnimal")));
         return view("ConsultaAgendamento_View", $data);
     }
 
@@ -584,7 +587,17 @@ class Dados extends BaseController
         return view("ConsultaAtendimento_View", $data);
     }
 
+<<<<<<< HEAD
+    function alterarAgendamento($cod){
+        $bq = new Banco_Query();
+        $data['ConAgendamento'] = $bq->consultaAgendamentoAlteracao($cod);
+        return view("AlterarAgendamento_View", $data);
+    }
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LOGIN / LOGOUT
+=======
     ///////////////////////////////////////////////////////////////////////////////////// LOGIN / LOGOUT
+>>>>>>> 11e2f7397acc521fcbe94dbacaef518281c9e3e5
     function loginCli2()
     { {
             // Carrega o helper de formulários e validação

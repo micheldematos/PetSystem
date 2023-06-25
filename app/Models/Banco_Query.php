@@ -75,8 +75,12 @@ class Banco_Query extends Model {
         return $this->db->query("SELECT * FROM cliente WHERE Nome LIKE '$nome%'");
     }
 
-    function consultaAgendamento($nome){
-        return $this->db->query("SELECT * FROM cliente WHERE Nome LIKE '$nome%'");
+    function consultaAgendamento(){
+        return $this->db->query("SELECT * FROM atendimento WHERE ServicoRealizado = '0'");
+    }
+
+    function consultaAgendamento2($cod){
+        return $this->db->query("SELECT * FROM atendimento WHERE CodAnimal LIKE '$cod'");
     }
 
     function consultaAtendimento($cod){
@@ -208,6 +212,9 @@ class Banco_Query extends Model {
         WHERE CodAtendimento = '$cod'");
     }
 
+    function consultaAgendamentoAlteracao($cod){
+        return $this->db->query("SELECT * FROM atendimento WHERE CodAtendimento = '$cod'");
+    }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// INATIVAÇÃO
     function inativarAnimais($cod){

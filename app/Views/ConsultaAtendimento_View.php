@@ -115,8 +115,8 @@
 
                         <div class="col" style="margin-top: 16px;">
                             <a href="/ProjetoWeb/public/AltCliente/<?php echo $valor->CodAtendimento?>" class="fonte-titulo" style="text-decoration: none;"><h2 class="text-break" style="text-decoration: none; font-weight: bolder; margin: 0;"><?php echo $so->selectNomeAnimal($valor->CodAnimal)?></h2></a>
-                            <p class="" style="color: #E34C48; Margin: 0;"> Data: <?php echo $so->selectDataAtendimento($valor->CodOcupacao)?></p>
-                            <p class="" style="color: #E34C48; Margin: 0;"> Hora: <?php echo $so->selectHoraAtendimento($valor->CodOcupacao) ?></p>
+                            <p class="" style="color: #E34C48; Margin: 0;"> Data: <?php echo $so->selectData($valor->CodOcupacao)?></p>
+                            <p class="" style="color: #E34C48; Margin: 0;"> Hora: <?php echo $so->selectHora($valor->CodOcupacao) ?></p>
                             <p class="" style="color: #E34C48;"> Profissional: <?php echo $so->selectNomeUsuarioAtendimento($valor->CodServico) ?></p>
                             <p class="" style="color: #E34C48;">Código: <?php echo $valor->CodAtendimento?></p>
                         </div>
