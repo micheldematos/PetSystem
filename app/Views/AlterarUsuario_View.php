@@ -93,10 +93,11 @@
           <?php use App\Models\SelectOptions; foreach($ConUsuario->getResult() as $valor){$so = new SelectOptions(); ?>
             <h2 class="fonte-titulo text-break" style="font-size: 32px; font-weight: bold; margin: 0; padding: 0;"><?php echo $valor->Nome?></h2><br>
             
-            <div class="col-md-6">   
+            <div class="col-md-6">  
+            <label for="formGroupExampleInput" class="form-label"><strong class="fonte-titulo">Nome Completo</strong></label> 
                 <form action='' method='post'>  
-                <input type='hidden' class='form-control' name='CodUsuario' value='<?php $valor->CodUsuario ?>' aria-describedby='inputGroup-sizing-default'>                   
-                <label for="formGroupExampleInput" class="form-label"><strong class="fonte-titulo">Nome Completo</strong></label>
+                <input type='hidden' class='form-control' name='CodUsuario' value='<?php echo $valor->CodUsuario ?>' aria-describedby='inputGroup-sizing-default'>                   
+                
                 <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" name='Nome' value='<?php echo $valor->Nome ?>'>
             </div>
 
@@ -106,11 +107,13 @@
                       <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Atribuição</strong></label>
                   </div>
                   <div class="col" style="margin: 0;">
-                      <input type="text" class="form-control fonte-titulo" style="min-width: 210px; margin: 0;" id="formGroupExampleInput2" placeholder="Usuários">
+                  <select class='form-select fonte-titulo' id='inputGroupSelect01' style="min-width: 210px; margin: 0;" >
+                      
+                      <?php $so->selectNomeTipoServicoUsuario($valor->CodUsuario) ?>
+                      </select>
                   </div>
                   <div class="col" style="margin: 0;">
-                    <a href=""><img src="../IMAGENS/adicionar.svg" alt=""></a>
-                    <a href=""><img src="../IMAGENS/lixeira.svg" alt=""></a>
+                    <a href="/ProjetoWeb/public/cadServico"><img src="<?php echo base_url("/IMAGENS/adicionar.svg") ?>" alt=""></a>
                   </div>
                 </div> 
             </div>
@@ -136,11 +139,13 @@
                       <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Ocupação</strong></label>
                   </div>
                   <div class="col" style="margin: 0;">
-                      <input type="text" class="form-control fonte-titulo" style="min-width: 210px; margin: 0;" id="formGroupExampleInput2" placeholder="Animais">
+                  <select class='form-select fonte-titulo' id='inputGroupSelect01' style="min-width: 210px; margin: 0;" >
+                      
+                      <?php $so->selectOcupacaoUsuario($valor->CodUsuario) ?>
+                      </select>
                   </div>
                   <div class="col" style="margin: 0;">
-                    <a href=""><img src="../IMAGENS/adicionar.svg" alt=""></a>
-                    <a href=""><img src="../IMAGENS/lixeira.svg" alt=""></a>
+                    <a href="/ProjetoWeb/public/cadOcupacao"><img src="<?php echo base_url("/IMAGENS/adicionar.svg") ?>" alt=""></a>
                   </div>
                 </div> 
             </div>
@@ -199,8 +204,8 @@
             
             <!-- Aquiii -->
             <div class="col-md-12 d-flex justify-content-start align-items-center" style="margin-top: 36px; margin-bottom: 36px; padding: 0;">
-              <button type='submit'  class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder; border: #DF322E;" value='Confirmar'>ATUALIZAR</button> 
-              <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; margin-left: 10PX; border-color: #DF322E; color: #DF322E;"><a href='/ProjetoWeb/public/IntUsuario/<?php echo $valor->CodUsuario?>' style="text-decoration: none; color: #DF322E;">INATIVAR</a></button>
+              <button type='submit' class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder; border: #DF322E;">ATUALIZAR</button> 
+              <button type="button" value='Confirmar' class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px; margin-left: 10PX; border-color: #DF322E; color: #DF322E;"><a href='/ProjetoWeb/public/IntUsuario/<?php echo $valor->CodUsuario?>' style="text-decoration: none; color: #DF322E;">INATIVAR</a></button>
               </form>
             </div>
 

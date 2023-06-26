@@ -497,7 +497,6 @@ class Dados extends BaseController
                 $this->request->getPost("E_mail"),
                 $this->request->getPost("Funcao"),
                 $TipoUser,
-                $this->request->getPost("Situacao"),
                 $this->request->getPost("Data_Admissao"),
                 $this->request->getPost("FoneRes"),
                 $this->request->getPost("FoneCom"),
@@ -587,7 +586,6 @@ class Dados extends BaseController
         return view("ConsultaAtendimento_View", $data);
     }
 
-<<<<<<< HEAD
     function alterarAgendamento($cod){
         $bq = new Banco_Query();
         $data['ConAgendamento'] = $bq->consultaAgendamentoAlteracao($cod);
@@ -595,9 +593,6 @@ class Dados extends BaseController
     }
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// LOGIN / LOGOUT
-=======
-    ///////////////////////////////////////////////////////////////////////////////////// LOGIN / LOGOUT
->>>>>>> 11e2f7397acc521fcbe94dbacaef518281c9e3e5
     function loginCli2()
     { {
             // Carrega o helper de formulários e validação

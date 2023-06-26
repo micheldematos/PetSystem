@@ -146,14 +146,13 @@ class Banco_Query extends Model {
         return $this->db->query("SELECT * FROM usuario WHERE CodUsuario = '$cod'");
     }
 
-    function AlterarUsuario($cod, $Nome, $CPF, $E_mail, $Funcao, $Tipo, $Situacao, $Data_Admissao, $FoneRes, $FoneCom, $Celular){
+    function AlterarUsuario($cod, $Nome, $CPF, $E_mail, $Funcao, $Tipo, $Data_Admissao, $FoneRes, $FoneCom, $Celular){
         return $this->db->query("UPDATE usuario SET 
         Nome = '$Nome',
         CPF = '$CPF',
         E_mail = '$E_mail',
         Funcao = '$Funcao',
         Tipo = '$Tipo',
-        Situacao = '$Situacao',
         Data_Admissao = '$Data_Admissao',
         FoneRes = '$FoneRes',
         FoneCom = '$FoneCom',

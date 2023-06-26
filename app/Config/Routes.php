@@ -72,7 +72,7 @@ $routes->post("AltOcupacao/(:num)", "Dados::alterarOcupacao2/$1");
 $routes->get("AltOcupacao/(:num)", "Dados::alterarOcupacao/$1"); 
 $routes->post("AltOcupacao/(:num)", "Dados::alterarOcupacao2/$1"); 
 
-// Serviço
+// Serviço (Atribuição)
 $routes->get("cadServico", "Dados::cadastrarServico"); 
 $routes->post("cadServico", "Dados::cadastrarServico2"); 
 $routes->get("ConServico", "Dados::consultaServico"); 
@@ -82,7 +82,7 @@ $routes->post("removeServico/(:num)", "Dados::removerServico/$1");
 $routes->get("AltServico/(:num)", "Dados::alterarServico/$1"); 
 $routes->post("AltServico/(:num)", "Dados::alterarServico2/$1"); 
 
-// Tipo Serviço (Atribuição)
+// Tipo Serviço 
 $routes->get("cadTipoServ", "Dados::cadastrarTipoServ"); 
 $routes->post("cadTipoServ", "Dados::cadastrarTipoServ2"); 
 $routes->get("ConTipoServico", "Dados::consultaTipoServico"); 
