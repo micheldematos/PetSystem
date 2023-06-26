@@ -44,13 +44,18 @@
 
 
 /* Fontes */
+@font-face {
+    font-family: Montserrat-Regular;
+    src: "../Fontes/Montserrat-Regular.ttf";
+  }
+
 .fonte-titulo {
-    font-family: 'Montserrat';
+    font-family: Montserrat-Regular;
     color: #233B56;
 }
 
 .fonte-titulo-claro {
-    font-family: 'Montserrat';
+    font-family: Montserrat-Regular;
     color: white;
 }
 
@@ -173,3 +178,6 @@
 #testeee{
     display: none;
 }
+
+
+
