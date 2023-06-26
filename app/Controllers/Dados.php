@@ -153,7 +153,9 @@ class Dados extends BaseController
             );
             
         }
-        return view("Home_View");
+
+        $data['ConUsuario'] = $bq->consultaUsuario($this->request->getPost("NomeUsuario"));
+        return view("ConsultaUsuario_View", $data);
     }
 
     function cadastrarAnimal()
@@ -535,8 +537,16 @@ class Dados extends BaseController
             $this->request->getPost("Data_Adocao")
             
         );
-        $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
-        return view("ConsultaAnimalCli_View", $data);
+
+        $session = session();
+        if($session->get('Id_Cliente')){
+            $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+            return view("ConsultaAnimalCli_View", $data);
+        } else if ($session->get('Id_Usuario')){
+            $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+            return view("ConsultaAnimal_View", $data);
+        }
+        
     }
 
     function alterarUsuario($cod){
@@ -823,8 +833,15 @@ class Dados extends BaseController
     function inativarAnimais($cod){
         $bq = new Banco_Query();
         $bq->inativarAnimais($cod);
-        $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
-        return view("ConsultaAnimalCli_View", $data);
+        $session = session();
+
+        if($session->get('Id_Cliente')){
+            $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+            return view("ConsultaAnimalCli_View", $data);
+        } else if ($session->get('Id_Usuario')){
+            $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+            return view("ConsultaAnimal_View", $data);
+        }
     }
     
     function inativarCliente($cod){
@@ -845,8 +862,15 @@ class Dados extends BaseController
     function ativarAnimais($cod){
         $bq = new Banco_Query();
         $bq->ativarAnimais($cod);
-        $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
-        return view("ConsultaAnimalCli_View", $data);
+        
+        $session = session();
+        if($session->get('Id_Cliente')){
+            $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+            return view("ConsultaAnimalCli_View", $data);
+        } else if ($session->get('Id_Usuario')){
+            $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+            return view("ConsultaAnimal_View", $data);
+        }
     }
     
     function ativarCliente($cod){
@@ -854,6 +878,7 @@ class Dados extends BaseController
         $bq->ativarCliente($cod);
         $data['ConCli'] = $bq->consultaCli($this->request->getPost("NomeCli"));
         return view("ConsultaCli_View", $data);
+        
     }
     
     function ativarUsuario($cod){
