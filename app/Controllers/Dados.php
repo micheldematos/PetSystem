@@ -47,7 +47,17 @@ class Dados extends BaseController
             $this->request->getPost("CEP"),
             $this->request->getPost("Logradouro")
         );
-        return view("Home_View");
+
+        $session = session();
+
+        if($session->get('Id_Cliente')){
+            return view("Home_View");
+        }
+
+        if($session->get('Id_Usuario')){
+            $data['ConCli'] = $bq->consultaCli($this->request->getPost("NomeCli"));
+            return view("ConsultaCli_view", $data);
+        }
     }
 
     function cadastrarU()
@@ -151,12 +161,13 @@ class Dados extends BaseController
         return view("CadAnimal_View");
     }
 
-    function cadastrarAnimal2()
-    {
+    function cadastrarAnimal2() {
         $bq = new \App\Models\Banco_Query();
         $session = session();
-        $CodCli = $session->get('Id_Cliente');
-        $bq->cadastrarAnimal(
+
+        if($session->get('Id_Cliente')){
+            $CodCli = $session->get('Id_Cliente');
+            $bq->cadastrarAnimal(
             $this->request->getPost("Nome"),
             $this->request->getPost("Tipo"),
             $this->request->getPost("Raca"),
@@ -168,7 +179,23 @@ class Dados extends BaseController
 
         $data['ConAnimais'] = $bq->consultaAnimaisCli($this->request->getPost("NomeAnimal"));
         return view("ConsultaAnimalCli_View", $data);
+        }
+
+        if($session->get('Id_Usuario')){
+            $bq->cadastrarAnimal(
+            $this->request->getPost("Nome"),
+            $this->request->getPost("Tipo"),
+            $this->request->getPost("Raca"),
+            $this->request->getPost("Idade"),
+            1,
+            $this->request->getPost("Data_Adocao"),
+            $this->request->getPost("Usuario"));
+
+            $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
+            return view("ConsultaAnimal_View", $data);
+        };
     }
+    
 
     function cadastrarTipoServ()
     {
@@ -184,7 +211,8 @@ class Dados extends BaseController
             $this->request->getPost("NomeServico")
         );
 
-        return view("Home_View");
+        $data['ConTipoServico'] = $bq->consultaTipoServico($this->request->getPost("Nome"));
+        return view("ConsultaTipoServico_View", $data);
     }
 
     function cadastrarServico()
@@ -480,6 +508,11 @@ class Dados extends BaseController
         if ($session->get('Id_Cliente')) {
             $data['ConCli'] = $bq->consultaCli($this->request->getPost("NomeCli"));
             return view("Home_View");
+        }
+
+        if ($session->get('Id_Usuario')) {
+            $data['ConCli'] = $bq->consultaCli($this->request->getPost("NomeCli"));
+            return view("ConsultaCli_view", $data);
         }
         
     }
