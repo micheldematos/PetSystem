@@ -44,18 +44,24 @@
 
 
 /* Fontes */
-@font-face {
+/* @font-face {
     font-family: Montserrat-Regular;
     src: "../Fontes/Montserrat-Regular.ttf";
-  }
+} */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+body{
+    font-family: 'Montserrat','sans-serif';
+}
+
 
 .fonte-titulo {
-    font-family: Montserrat-Regular;
+    font-family: Montserrat;
     color: #233B56;
 }
 
 .fonte-titulo-claro {
-    font-family: Montserrat-Regular;
+    font-family: Montserrat;
     color: white;
 }
 
