@@ -37,7 +37,6 @@ class SelectOptions extends Model
            $nome = $dados['Nome'];
            echo "<option value='$cod'>$nome</option>";
         }
-        
     }
 
     function SelectTipoServ(){

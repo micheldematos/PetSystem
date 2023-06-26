@@ -77,7 +77,7 @@ $routes->get("AltOcupacao/(:num)", "Dados::alterarOcupacao/$1");
 $routes->post("AltOcupacao/(:num)", "Dados::alterarOcupacao2/$1"); 
 
 // Serviço (Atribuição)
-$routes->get("cadServico", "Dados::cadastrarServico"); 
+$routes->get("cadServico/(:num)", "Dados::cadastrarServico/$1"); 
 $routes->post("cadServico", "Dados::cadastrarServico2"); 
 $routes->get("ConServico", "Dados::consultaServico"); 
 $routes->post("ConServico", "Dados::consultaServico2"); 

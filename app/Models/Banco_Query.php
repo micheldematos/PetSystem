@@ -66,6 +66,10 @@ class Banco_Query extends Model {
     function consultaUsuario($nome){
         return $this->db->query("SELECT * FROM usuario WHERE Nome LIKE '$nome%'");
     }
+
+    function consultaUsuarioCod($cod){
+        return $this->db->query("SELECT * FROM usuario WHERE CodUsuario = '$cod'");
+    }
     
     function consultaOcupacao($cod){
         return $this->db->query("SELECT * FROM ocupacaousuario WHERE CodUsuario LIKE '$cod%%'");

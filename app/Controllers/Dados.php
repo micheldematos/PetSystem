@@ -217,9 +217,11 @@ class Dados extends BaseController
         return view("ConsultaTipoServico_View", $data);
     }
 
-    function cadastrarServico()
+    function cadastrarServico($cod)
     {
-        return view("CadServico_View");
+        $bq = new Banco_Query();
+        $data['ConUsuario'] = $bq->consultaUsuarioCod($cod);
+        return view("CadServico_View", $data);
     }
 
     function cadastrarServico2()
@@ -232,7 +234,8 @@ class Dados extends BaseController
                 $this->request->getPost("CodTipoServ"),
                 $this->request->getPost("CodUsuario")
             );
-            return view("Home_View");
+            $data['ConUsuario'] = $bq->consultaUsuario($this->request->getPost("NomeUsuario"));
+            return view("ConsultaUsuario_View", $data);
         }
         if ($session->get("Tipo") == "0") {
             $bq = new Banco_Query();

@@ -208,7 +208,7 @@
                       </select>
                   </div>
                   <div class="col" style="margin: 0;">
-                    <a href="/ProjetoWeb/public/cadServico"><img src="<?php echo base_url("/IMAGENS/adicionar.svg") ?>" alt=""></a>
+                    <a href="/ProjetoWeb/public/cadServico/<?php echo $valor->CodUsuario?>"><img src="<?php echo base_url("/IMAGENS/adicionar.svg") ?>" alt=""></a>
                   </div>
                 </div> 
             </div>
@@ -240,7 +240,7 @@
                       </select>
                   </div>
                   <div class="col" style="margin: 0;">
-                    <a href="/ProjetoWeb/public/cadOcupacao"><img src="<?php echo base_url("/IMAGENS/adicionar.svg") ?>" alt=""></a>
+                    <a href="/ProjetoWeb/public/cadOcupacao/<?php echo $valor->CodUsuario?>"><img src="<?php echo base_url("/IMAGENS/adicionar.svg") ?>" alt=""></a>
                   </div>
                 </div> 
             </div>
