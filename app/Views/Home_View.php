@@ -82,7 +82,7 @@
                       </a>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                          <img id="" style="height: 35px" src="<?php echo base_url("/IMAGENS/usuario.svg") ?>">
                         </a>
                         <ul class="dropdown-menu">
                           <li>
@@ -160,7 +160,7 @@
                       </a>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                        <img id="" style="height: 35px" src="<?php echo base_url("/IMAGENS/usuario.svg") ?>">
                         </a>
                         <ul class="dropdown-menu">
                           <li>
@@ -234,7 +234,7 @@
                       </a>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                        <img id="" style="height: 35px" src="<?php echo base_url("/IMAGENS/usuario.svg") ?>">
                         </a>
                         <ul class="dropdown-menu">
                           <li>

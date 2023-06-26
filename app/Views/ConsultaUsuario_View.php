@@ -21,79 +21,230 @@
 
      <!-- ********* Login de administrador *********         -->
                 
-     <?php if ($session->get('Tipo') == "1") { ?>
+     <!-- ********* Sem login ********* -->
+    <?php if (!$session->get('Id_Cliente') and !$session->get('Id_Usuario')) { ?>
+                  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
+      <div class="container d-flex justify-content-center">
+          <a class="navbar-brand" href="#"><img id="logo-cabecalho" src="../IMAGENS/logo.png"></a>
+          <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
+            
+        </div>
 
-<nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
-<div class="container d-flex justify-content-center">
-  <a class="navbar-brand" href="/ProjetoWeb/public/">
-    <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
-  </a>
-  <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
-    <div>
+        <div class="d-flex justify-content-between align-items-center teste">
+          <a class="" href="#" style="padding: 0;"><img id="logo-cabecalho-mobile" src="../IMAGENS/logo.png"></a>
+          <form class="d-flex justify-content-center" role="search">
+              <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px;"><a class='link' href='/ProjetoWeb/public/LoginFC' style="text-decoration: none; color: #F5F9FF;">LOGIN</a></button>
+              <button type="button" class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder;"><a class='link' href='/ProjetoWeb/public/cadC' style="text-decoration: none; color: #F5F9FF;">CADASTRAR</a></button>
+          </form>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+                <?php } ?>
 
-      <ul class="navbar-nav fonte-titulo">
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Cadastro
-      </a>
-      <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/cadC'>Cadastrar cliente</a></li>
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Cadastrar Serviço</a></li>
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a></li>
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/cadU'>Cadastrar Usuário</a></li> 
-      </ul>
-      </li>
+                
+                <!-- ********* Login de cliente ********* -->
+                <?php if ($session->get('Id_Cliente')) { ?>
+                <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
+                  <div class="container d-flex justify-content-center">
+                    <a class="navbar-brand" href="/ProjetoWeb/public/">
+                      <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
+                      <div>
+                        <ul class="navbar-nav fonte-titulo">
+                          <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                              Animais
+                            </a>
+                            <ul class="dropdown-menu">
+                              <li>
+                                <a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a>
+                              </li>
+                              <li>
+                                <a class="dropdown-item" href='/ProjetoWeb/public/ConAnimalCli'>Consultar animais</a>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center teste">
+                      <a class="" href="/ProjetoWeb/public/" style="padding: 0;">
+                        <img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                      </a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <img id="" style="height: 35px" src="<?php echo base_url("/IMAGENS/usuario.svg") ?>">
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href='/ProjetoWeb/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href='/ProjetoWeb/public/logout'>Logout</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    </div>
+                  </div>
+                </nav>
+                <?php } ?>
 
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Consulta
-      </a>
-      <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/ConCli'>Consultar cliente</a></li>
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/ConTipoServico'>Consultar serviço</a></li>
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/ConAnimal'>Consultar animal</a></li>
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/ConUsuario'>Consultar usuário</a></li>
-      </ul>
-      </li>
+                
+                    
+    <!-- ********* Login de administrador *********         -->
+                
+                <?php if ($session->get('Tipo') == "1") { ?>
 
-      <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Pendentes
-      </a>
-      <ul class="dropdown-menu">
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Agendamento</a></li>
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/cadServico'>Horários disponíveis</a></li>
-          <li><a class="dropdown-item" href='/ProjetoWeb/public/cadOcupacao'>Atendimento</a></li> 
-      </ul>
-      </li>
-      </ul>
+                  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
+                  <div class="container d-flex justify-content-center">
+                    <a class="navbar-brand" href="/ProjetoWeb/public/">
+                      <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
+                      <div>
 
-    </div>
-  </div>
-  <div class="d-flex justify-content-between align-items-center teste">
-    <a class="" href="/ProjetoWeb/public/" style="padding: 0;">
-      <img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
-    </a>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-        <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
-      </a>
-      <ul class="dropdown-menu">
-        <li>
-          <a class="dropdown-item" href='/ProjetoWeb/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
-        </li>
-        <li>
-          <a class="dropdown-item" href='/ProjetoWeb/public/logout'>Logout</a>
-        </li>
-      </ul>
-    </li>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  </div>
-</div>
-</nav> 
-<?php } ?>
+                        <ul class="navbar-nav fonte-titulo">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cadastro
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadC'>Cadastrar cliente</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Cadastrar Serviço</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadU'>Cadastrar Usuário</a></li> 
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Consulta
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConCli'>Consultar cliente</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConTipoServico'>Consultar serviço</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConAnimal'>Consultar animal</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConUsuario'>Consultar usuário</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pendentes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Agendamento</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadServico'>Horários disponíveis</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadOcupacao'>Atendimento</a></li> 
+                        </ul>
+                        </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center teste">
+                      <a class="" href="/ProjetoWeb/public/" style="padding: 0;">
+                        <img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                      </a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img id="" style="height: 35px" src="<?php echo base_url("/IMAGENS/usuario.svg") ?>">
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href='/ProjetoWeb/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href='/ProjetoWeb/public/logout'>Logout</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    </div>
+                  </div>
+                </nav> 
+                <?php } ?>
+
+                <!-- ********* Login de usuário *********         -->
+                <?php if ($session->get('Tipo') == "0") { ?>
+                  <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
+                  <div class="container d-flex justify-content-center">
+                    <a class="navbar-brand" href="/ProjetoWeb/public/">
+                      <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                    </a>
+                    <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
+                      <div>
+
+                        <ul class="navbar-nav fonte-titulo">
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Cadastro
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadC'>Cadastrar cliente</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Cadastrar Serviço</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Consulta
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConCli'>Consultar cliente</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConTipoServico'>Consultar serviço</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConAnimal'>Consultar animal</a></li>
+                        </ul>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pendentes
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Agendamento</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadServico'>Horários disponíveis</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadOcupacao'>Atendimento</a></li> 
+                        </ul>
+                        </li>
+                        </ul>
+
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center teste">
+                      <a class="" href="/ProjetoWeb/public/" style="padding: 0;">
+                        <img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                      </a>
+                      <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img id="" style="height: 35px" src="<?php echo base_url("/IMAGENS/usuario.svg") ?>">
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li>
+                            <a class="dropdown-item" href='/ProjetoWeb/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
+                          </li>
+                          <li>
+                            <a class="dropdown-item" href='/ProjetoWeb/public/logout'>Logout</a>
+                          </li>
+                        </ul>
+                      </li>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                    </div>
+                  </div>
+                </nav>
+                <?php } ?>
     
     <!-- Conteúdo da página -->
     <div class="container" style="padding-top: 100px; min-height: 100vh;">  
