@@ -10,8 +10,10 @@ use App\Models\Login_QueryU;
 use App\Models\SelectOptions;
 use CodeIgniter\Controller;
 
+
 class Dados extends BaseController
 {
+    
 
     ///////////////////////////////////////////////////////////////////////////////////////// CADASTRO
     function cadastrarC()
@@ -466,8 +468,13 @@ class Dados extends BaseController
             $this->request->getPost("Logradouro")
         );
         $bq = new \App\Models\Banco_Query();
-        $data['ConCli'] = $bq->consultaCli($this->request->getPost("NomeCli"));
-        return view("ConsultaCli_View", $data);
+        $session = session();
+
+        if ($session->get('Id_Cliente')) {
+            $data['ConCli'] = $bq->consultaCli($this->request->getPost("NomeCli"));
+            return view("Home_View");
+        }
+        
     }
 
     function alterarAnimal($cod){

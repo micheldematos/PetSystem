@@ -69,7 +69,7 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li>
-                            <a class="dropdown-item" href='/ProjetoWeb/public/'>Meu cadastro</a>
+                            <a class="dropdown-item" href='/ProjetoWeb/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
                           </li>
                           <li>
                             <a class="dropdown-item" href='/ProjetoWeb/public/logout'>Logout</a>
