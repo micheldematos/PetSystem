@@ -131,6 +131,23 @@ class SelectOptions extends Model
         
     }
 
+    function selectOcupacaoUser($cod) {
+        $con = mysqli_connect("127.0.0.1:3346", "root", "");
+        mysqli_select_db($con, "projetoweb");
+        $res = mysqli_query($con, "SELECT * FROM ocupacaousuario");
+        while ($dados = mysqli_fetch_array($res)) {
+            $codO = $dados['CodOcupacao'];
+            $data = $dados['Data'];
+            $hora = $dados['Hora'];
+
+            $res2 = mysqli_query($con, "SELECT * FROM usuario WHERE CodUsuario = '$cod'");
+            while ($dados2 = mysqli_fetch_array($res2)) {
+                $nome = $dados2['Nome'];   
+            }
+            echo "<option value='$codO'>$nome - $data - $hora </option>";
+        }
+    }
+
     function selectSituacao($situacao){
         if($situacao == "1"){
             echo "Ativo";

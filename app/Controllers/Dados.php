@@ -249,9 +249,11 @@ class Dados extends BaseController
         }
     }
 
-    function cadastrarOcupacao()
+    function cadastrarOcupacao($cod)
     {
-        return view("CadOcupacao_View");
+        $bq = new Banco_Query();
+        $data['ConUsuario'] = $bq->consultaUsuarioCod($cod);
+        return view("CadOcupacao_View", $data);
     }
 
     function cadastrarOcupacao2()
@@ -275,7 +277,8 @@ class Dados extends BaseController
                 $CodUsuario
             );
         }
-        return view("Home_View");
+        $data['ConUsuario'] = $bq->consultaUsuario($this->request->getPost("NomeUsuario"));
+        return view("ConsultaUsuario_View", $data);
     }
 
 

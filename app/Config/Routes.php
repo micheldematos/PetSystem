@@ -65,7 +65,7 @@ $routes->get("LoginU", "Dados::loginUsuario");
 $routes->post("LoginU", "Dados::loginUsuario2"); 
 
 // Ocupação
-$routes->get("cadOcupacao", "Dados::cadastrarOcupacao"); 
+$routes->get("cadOcupacao/(:num)", "Dados::cadastrarOcupacao/$1"); 
 $routes->post("cadOcupacao", "Dados::cadastrarOcupacao2"); 
 $routes->get("ConOcupacao", "Dados::consultaOcupacao"); 
 $routes->post("ConOcupacao", "Dados::consultaOcupacao2"); 

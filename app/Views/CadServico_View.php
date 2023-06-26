@@ -226,7 +226,7 @@
  
  <div class="container d-flex justify-content-center">
    <div class="row col-md-6 d-flex justify-content-between align-items-center campos_cad_cli">
-     <h2 class="fonte-titulo text-break" style="font-size: 32px; font-weight: bold; margin: 0; padding: 0;">Cadastrar ocupação</h2><br>
+     <h2 class="fonte-titulo text-break" style="font-size: 32px; font-weight: bold; margin: 0; padding: 0;">Cadastrar atribuição</h2><br>
 
      <div class="col-md-12">
 
