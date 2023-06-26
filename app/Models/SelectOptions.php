@@ -17,6 +17,17 @@ class SelectOptions extends Model
         }
     }
 
+    function selectTodosClientes(){
+        $Con = mysqli_connect("127.0.0.1:3346", "root", "");
+        mysqli_select_db($Con,"projetoweb");
+        $res = mysqli_query($Con, "SELECT * FROM cliente");
+        while($dados = mysqli_fetch_array($res)){
+           $nome = $dados['Nome'];
+           $cod = $dados['CodCli'];
+           echo "<option value='$cod'>$nome</option>";
+        }
+    }
+
     function SelectUsuário(){
         $Con = mysqli_connect("127.0.0.1:3346", "root", "");
         mysqli_select_db($Con,"projetoweb");

@@ -140,8 +140,8 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href='/ProjetoWeb/public/cadC'>Cadastrar cliente</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/#'>Cadastrar Serviço</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/#'>Cadastrar animal</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Cadastrar Serviço</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a></li>
                         </ul>
                         </li>
 
@@ -150,9 +150,9 @@
                             Consulta
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/#'>Consultar cliente</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/#'>Consultar serviço</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/#'>Consultar animal</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConCli'>Consultar cliente</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConTipoServico'>Consultar serviço</a></li>
+                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConAnimal'>Consultar animal</a></li>
                         </ul>
                         </li>
 
@@ -193,11 +193,6 @@
                     </div>
                   </div>
                 </nav>
-
-                        <a class='link' href='/ProjetoWeb/public/logout'>Logout</a>";
-
-                        
-                        
                 <?php } ?>
 
                 </ul>
