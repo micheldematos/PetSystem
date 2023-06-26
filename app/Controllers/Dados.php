@@ -28,7 +28,7 @@ class Dados extends BaseController
             $this->request->getPost("Nome"),
             password_hash($this->request->getPost("Senha"), PASSWORD_DEFAULT),
             $this->request->getPost("E_mail"),
-            $this->request->getPost("Situacao"),
+            1,
             $this->request->getPost("CPF"),
             $this->request->getPost("FoneRes"),
             $this->request->getPost("FoneCom"),

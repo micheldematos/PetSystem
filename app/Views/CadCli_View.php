@@ -1,3 +1,4 @@
+<?php $session = session() ?>
 <!doctype html>
 <html lang="pt-br">
 
@@ -16,60 +17,20 @@
 
   <main class="container-fluid" style="background-color: #F5F9FF;">
     <!-- Barra de menu -->
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
+    <?php if (!$session->get('Id_Cliente') and !$session->get('Id_Usuario')) { ?>
+      <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
       <div class="container d-flex justify-content-center">
           <a class="navbar-brand" href="#"><img id="logo-cabecalho" src="../IMAGENS/logo.png"></a>
           <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
             <div>
-                <ul class="navbar-nav fonte-titulo">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Serviços
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Consulta de serviços</a></li>
-                            <li><a class="dropdown-item" href="#">Consulta de atendimentos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Cliente
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Consulta</a></li>
-                            <li><a class="dropdown-item" href="#">Animais</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Usuários
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Consultar usuários</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Horários
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Horários disponíveis</a></li>
-                            <li><a class="dropdown-item" href="#">Agendamentos</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Conheça-nos
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Sobre nós</a></li>
-                            <li><a class="dropdown-item" href="#">Contato</a></li>
-                        </ul>
-                    </li>
-                </ul>
+                
             </div>
         </div>
-
+        </div>
+    </nav>
+    <?php } ?>
+    
+<!-- 
         <div class="d-flex justify-content-between align-items-center teste">
           <a class="" href="#" style="padding: 0;"><img id="logo-cabecalho-mobile" src="../IMAGENS/logo.png"></a>
           <form class="d-flex justify-content-center" role="search">
@@ -81,10 +42,10 @@
           </button>
         </div>
       </div>
-    </nav>
+    </nav> -->
     
     <!-- Conteúdo da página -->
-    <div class="container" style="padding-top: 100px; min-height: 100vh;">
+    <div class="container" style="padding-top: 90px; min-height: 100vh;">
       
       <div class="d-flex justify-content-between">
 
@@ -93,44 +54,12 @@
             <h2 class="fonte-titulo" style="font-size: 32px; font-weight: bold; margin: 0; padding: 0;">Cadastro de cliente</h2><br>
 
 
-            <!-- Aquiiii -->
-            <div id="sec1" class="container">
-            
-            <form action="CadastrarC2" method="post">
-                <h1>Cadastrar Cliente</h1>
-                <label class="form-label">Situação:</label>
-
-                <select id="Situacao" class="form-control">
-                    <option value="0">Inativo</option>
-                    <option value="1">Ativo</option>
-                </select><br>
-
-                <input class="form-control" type="text" name="Nome" placeholder="Nome">
-                <input class="form-control" type="text" name="Senha" placeholder="Senha">
-                <input class="form-control" type="text" name="E_mail" placeholder="E-mail"><br>
-                <input class="form-control" type="text" name="CPF" placeholder="CPF">
-                <input class="form-control" type="text" name="FoneRes" placeholder="Fone Residencial">
-                <input class="form-control" type="text" name="FoneCom" placeholder="Fone Comercial"><br>
-                <input class="form-control" type="text" name="Celular" placeholder="Celular">
-                <input class="form-control" type="text" name="Cidade" placeholder="Cidade">
-                <input class="form-control" type="number" name="Numero" placeholder="Número"><br>
-                <input class="form-control" type="text" name="Estado" placeholder="Estado">
-                <input class="form-control" type="text" name="Complemento" placeholder="Complemento">
-                <input class="form-control" type="text" name="CEP" placeholder="CEP"><br>
-                <input class="form-control" type="text" name="Logradouro" placeholder="Logradouro">
-                <input class="form-control" type="submit" value="Confirmar" class="btn btn-primary"><br>
-                Se não é cliente mas um usário do sistema clique <a href="/ProjetoWeb/public/cadU">Aqui</a> para
-                cadastrar
-            </form>
-        </div>
-        <!-- Aquiiii -->
-
 
 
             
-            <div class="col-md-6">
-                <form action="CadastrarC2" method="post">                        
+            <div class="col-md-6">           
                 <label for="formGroupExampleInput" class="form-label"><strong class="fonte-titulo">Nome Completo</strong></label>
+                <form action="CadastrarC2" method="post">
                 <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" name="Nome" placeholder="Nome Completo">
             </div>
 
@@ -153,6 +82,7 @@
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Celular</strong></label>
               <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name="Celular" placeholder="(xx) xxxxx-xxxx">
             </div>
+
             <div class="col-md-3">
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Estado</strong></label>
               <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name="Estado" placeholder="Estado">
@@ -167,40 +97,37 @@
               <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Telefone Residencial</strong></label>
               <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" name="FoneRes" placeholder="(xx) xxxxx-xxxx">
             </div>
-            <div class="col-md-3">
-              <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Número</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Número">
-            </div>
 
-            <div class="col-md-6">
-              <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Complemento</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Complemento">
-            </div>
             
             <div class="col-md-3">
-              <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Contato</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="(xx) xxxxx-xxxx">
+              <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Número</strong></label>
+              <input type="text" name="Numero" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Número">
             </div>
 
+            
+            <div class="col-md-6">
+              <label for="formGroupExampleInput2"  class="form-label"><strong class="fonte-titulo">Complemento</strong></label>
+              <input type="text" name="Complemento" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Complemento">
+            </div>
+            
+            
+            <div class="col-md-3">
+              <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Telefone comercial</strong></label>
+              <input type="text" name="FoneCom" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="(xx) xxxxx-xxxx">
+            </div>
+
+            
             <div class="col-md-6">                        
               <label for="formGroupExampleInput" class="form-label"><strong class="fonte-titulo">E-mail</strong></label>
-              <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="E-mail">
+              <input type="text" name="E_mail" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="E-mail">
           </div>
 
-          <div class="col-md-6">
-            <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Confirmar E-mail</strong></label>
-            <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Confirmar E-mail">
-          </div>
+          <!-- aquii -->
 
           <div class="col-md-6">                        
             <label for="formGroupExampleInput" class="form-label"><strong class="fonte-titulo">Senha</strong></label>
-            <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Senha">
+            <input type="text" name="Senha" class="form-control fonte-titulo" id="formGroupExampleInput" placeholder="Senha">
             <i style="font-size: 13px; color: #DF322E;">As senhas devem ter pelo menos 6 caracteres</i>
-          </div>
-
-          <div class="col-md-6">
-            <label for="formGroupExampleInput2" class="form-label"><strong class="fonte-titulo">Confirmar senha</strong></label>
-            <input type="text" class="form-control fonte-titulo" id="formGroupExampleInput2" placeholder="Confirmar senha">
           </div>
           
           <div class="col-md-12 d-flex justify-content-end align-items-center" style="margin-top: 36px; margin-bottom: 36px;">
@@ -208,8 +135,9 @@
               <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
               <label class="form-check-label" for="flexCheckDefault" style="font-size: 13px; color: #DF322E; margin-right: 10px;">Aceite a Política de Privacidade do Pet System</label>
             </div>
-            <button type="button" class="btn btn-danger fonte-titulo-claro" style="width: 168px; font-weight: bold; height: 56px;background-color: #DF322E;">CADASTRE-SE</button> 
+            <button type="submit" class="btn btn-danger fonte-titulo-claro" style="width: 168px; font-weight: bold; height: 56px;background-color: #DF322E;">CADASTRE-SE</button> 
           </div>
+          </form>
 
           </div>
         </div>
