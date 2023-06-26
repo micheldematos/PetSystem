@@ -18,7 +18,14 @@ class Dados extends BaseController
     ///////////////////////////////////////////////////////////////////////////////////////// CADASTRO
     function cadastrarC()
     {
-        return view("CadCli_View");
+        $session = session();
+
+        if($session->get('Id_Usuario')){
+            return view("CadCliU_View");
+        } else {
+            return view("CadCli_View");
+        }
+        
     }
 
     function cadastrarC2()

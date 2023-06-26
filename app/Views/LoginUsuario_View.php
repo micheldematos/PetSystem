@@ -20,11 +20,17 @@
 
             <div class="width444" style="margin-top: auto; margin-bottom: auto;">
 
-                <?php if (isset($error)): ?>
+            <?php if (isset($error)): ?>
                 <div class="alert alert-danger">
                     <?= $error ?>
                 </div>
-                <?php endif; ?>
+            <?php endif; ?>
+
+            <?php if (isset($validation)): ?>
+                <div class="alert alert-danger">
+                    <?= $validation->listErrors() ?>
+                </div>
+            <?php endif; ?>
 
                 
 
@@ -53,6 +59,7 @@
                     <div>
                         <button type="submit" class="btn btn-primary fonte-titulo-claro" style="width: 100%; font-weight: bold;">ENTRAR</button>                       
                     </div>
+                    </form>
                   </div>
 
                   <!-- <div class="row mb-3">
