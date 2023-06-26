@@ -4,6 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
+
 class Banco_Query extends Model {
 
     //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// CADASTRO
@@ -53,6 +54,13 @@ class Banco_Query extends Model {
 
     function consultaAnimais($nome){
         return $this->db->query("SELECT * FROM animal WHERE Nome LIKE '$nome%'");
+    }
+
+    function consultaAnimaisCli($nome){
+        $session = session();
+        $codCli = $session->get('Id_Cliente');
+        
+        return $this->db->query("SELECT * FROM animal WHERE Nome LIKE '$nome%' AND CodCli = '$codCli'");
     }
 
     function consultaUsuario($nome){

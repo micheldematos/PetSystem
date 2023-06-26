@@ -19,6 +19,10 @@ $routes->get("ConAdm", "Dados::telaConsultaAdm");
 // Animal
 $routes->get("ConAnimal", "Dados::consultaAnimais");
 $routes->post("ConAnimal", "Dados::consultaAnimais2");
+
+$routes->get("ConAnimalCli", "Dados::consultaAnimaisCli");
+$routes->post("ConAnimalCli", "Dados::consultaAnimaisCli2");
+
 $routes->get("cadA", "Dados::cadastrarAnimal");
 $routes->post("CadA2", "Dados::cadastrarAnimal2");
 $routes->get("AltAnimal/(:num)", "Dados::alterarAnimal/$1");

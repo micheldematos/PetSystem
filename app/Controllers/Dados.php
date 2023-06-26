@@ -156,7 +156,9 @@ class Dados extends BaseController
             $this->request->getPost("Data_Adocao"),
             $CodCli
         );
-        return view("Home_View");
+
+        $data['ConAnimais'] = $bq->consultaAnimaisCli($this->request->getPost("NomeAnimal"));
+        return view("ConsultaAnimalCli_View", $data);
     }
 
     function cadastrarTipoServ()
@@ -282,11 +284,25 @@ class Dados extends BaseController
         return view("ConsultaAnimal_View", $data);
     }
 
+    function consultaAnimaisCli()
+    {
+        $bq = new \App\Models\Banco_Query();
+        $data['ConAnimais'] = $bq->consultaAnimaisCli($this->request->getPost("NomeAnimal"));
+        return view("ConsultaAnimalCli_View", $data);
+    }
+
     function consultaAnimais2()
     {
         $bq = new \App\Models\Banco_Query();
         $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
         return view("ConsultaAnimal_View", $data);
+    }
+
+    function consultaAnimaisCli2()
+    {
+        $bq = new \App\Models\Banco_Query();
+        $data['ConAnimais'] = $bq->consultaAnimaisCli($this->request->getPost("NomeAnimal"));
+        return view("ConsultaAnimalCli_View", $data);
     }
 
     function consultaUsuario()
