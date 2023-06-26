@@ -55,7 +55,7 @@
                 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
                   <div class="container d-flex justify-content-center">
                     <a class="navbar-brand" href="/ProjetoWeb/public/">
-                      <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                      <img id="logo-cabecalho" src="../IMAGENS/logo.png">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
                       <div>
@@ -82,7 +82,7 @@
                       </a>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                          <img id="logo-cabecalho"  style="height: 25px;" src="<?php echo base_url("/IMAGENS/usuario.svg") ?>">
                         </a>
                         <ul class="dropdown-menu">
                           <li>
@@ -234,7 +234,7 @@
                       </a>
                       <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                          <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                          <img id="" style="height: 25px;" src="<?php echo base_url("/IMAGENS/usuario.svg") ?>">
                         </a>
                         <ul class="dropdown-menu">
                           <li>
