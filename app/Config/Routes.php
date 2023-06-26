@@ -16,20 +16,20 @@ $routes->get('/', 'Home::index');
 // Administrador (NOK)
 $routes->get("ConAdm", "Dados::telaConsultaAdm");
 
-// Animal
-$routes->get("ConAnimal", "Dados::consultaAnimais");
-$routes->post("ConAnimal", "Dados::consultaAnimais2");
-
+// Animal cliente
+$routes->get("cadA", "Dados::cadastrarAnimal");
+$routes->post("CadA2", "Dados::cadastrarAnimal2");
 $routes->get("ConAnimalCli", "Dados::consultaAnimaisCli");
 $routes->post("ConAnimalCli", "Dados::consultaAnimaisCli2");
 
-$routes->get("cadA", "Dados::cadastrarAnimal");
-$routes->post("CadA2", "Dados::cadastrarAnimal2");
+// Animal usuario
+$routes->get("ConAnimal", "Dados::consultaAnimais");
+$routes->post("ConAnimal", "Dados::consultaAnimais2");
 $routes->get("AltAnimal/(:num)", "Dados::alterarAnimal/$1");
 $routes->post("AltAnimal/(:num)", "Dados::alterarAnimal2/$1");
 $routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1");
-$routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1");
-$routes->get("AtivAnimal/(:num)", "Dados::ativarAnimais/$1");
+$routes->get("AtvAnimal/(:num)", "Dados::ativarAnimais/$1");
+
 
 // Agendamento
 $routes->get("ConAgendamento", "Dados::consultaAgendamento");

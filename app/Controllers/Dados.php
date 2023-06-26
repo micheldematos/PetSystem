@@ -489,7 +489,7 @@ class Dados extends BaseController
             
         );
         $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
-        return view("ConsultaAnimal_View", $data);
+        return view("ConsultaAnimalCli_View", $data);
     }
 
     function alterarUsuario($cod){
@@ -777,7 +777,7 @@ class Dados extends BaseController
         $bq = new Banco_Query();
         $bq->inativarAnimais($cod);
         $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
-        return view("ConsultaAnimal_View", $data);
+        return view("ConsultaAnimalCli_View", $data);
     }
     
     function inativarCliente($cod){
@@ -799,7 +799,7 @@ class Dados extends BaseController
         $bq = new Banco_Query();
         $bq->ativarAnimais($cod);
         $data['ConAnimais'] = $bq->consultaAnimais($this->request->getPost("NomeAnimal"));
-        return view("ConsultaAnimal_View", $data);
+        return view("ConsultaAnimalCli_View", $data);
     }
     
     function ativarCliente($cod){

@@ -39,7 +39,7 @@
                                 <a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Consultar animais</a>
+                                <a class="dropdown-item" href='/ProjetoWeb/public/ConAnimalCli'>Consultar animais</a>
                               </li>
                             </ul>
                           </li>
