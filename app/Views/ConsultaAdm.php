@@ -9,19 +9,19 @@
 <link rel="stylesheet" href="../CSS/Style.css">
 <body>
     <header class="topo">
-        <a class="link" href="/ProjetoWeb/public/">Home</a>
+        <a class="link" href="/PetSystem/public/">Home</a>
     </header>
 
     <div class="container-fluid" style="padding-top: 2vh;">
-        <a class="link2" href="/ProjetoWeb/public/ConCli">• Consulta Cliente</a><br>
-        <a class="link2" href="/ProjetoWeb/public/ConAnimal">• Consulta Animal</a><br>
-        <a class="link2" href="/ProjetoWeb/public/ConUsuario">• Consulta Usuário</a><br>
-        <a class="link2" href="/ProjetoWeb/public/ConOcupacao">• Consulta Ocupação</a><br>
-        <a class="link2" href="/ProjetoWeb/public/ConTipoServico">• Consulta Tipo de Serviço</a><br>
-        <a class="link2" href="/ProjetoWeb/public/ConServico">• Consulta Serviço</a><br>
-        <a class="link2" href="/ProjetoWeb/public/">• Consulta Horários Disp</a><br>
-        <a class="link2" href="/ProjetoWeb/public/ConAgendamento">• Consulta Agendamento</a><br>
-        <a class="link2" href="/ProjetoWeb/public/ConAtendimento">• Consulta Atendimento</a>
+        <a class="link2" href="/PetSystem/public/ConCli">• Consulta Cliente</a><br>
+        <a class="link2" href="/PetSystem/public/ConAnimal">• Consulta Animal</a><br>
+        <a class="link2" href="/PetSystem/public/ConUsuario">• Consulta Usuário</a><br>
+        <a class="link2" href="/PetSystem/public/ConOcupacao">• Consulta Ocupação</a><br>
+        <a class="link2" href="/PetSystem/public/ConTipoServico">• Consulta Tipo de Serviço</a><br>
+        <a class="link2" href="/PetSystem/public/ConServico">• Consulta Serviço</a><br>
+        <a class="link2" href="/PetSystem/public/">• Consulta Horários Disp</a><br>
+        <a class="link2" href="/PetSystem/public/ConAgendamento">• Consulta Agendamento</a><br>
+        <a class="link2" href="/PetSystem/public/ConAtendimento">• Consulta Atendimento</a>
     </div>
 </body>
 </html>

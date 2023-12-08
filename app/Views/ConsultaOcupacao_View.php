@@ -14,8 +14,8 @@
 <body>
     
     <header class="topo">
-        <a class="link" href="/ProjetoWeb/public">Home</a> &nbsp;
-        <a class="link" href="/ProjetoWeb/public/ConAdm">Consultas</a>
+        <a class="link" href="/PetSystem/public">Home</a> &nbsp;
+        <a class="link" href="/PetSystem/public/ConAdm">Consultas</a>
     </header>
     <main id="background">
         <h2 style="padding-top: 2vh; margin-left: 80vh;"><strong>Consulta Ocupação</strong></h2>
@@ -39,7 +39,7 @@
                  echo "<br>";
                  echo "Hora: ", $valor->Hora;
                  echo "<br>";
-                 echo "<a href='/ProjetoWeb/public/AltOcupacao/$valor->CodOcupacao'>Alterar</a>";
+                 echo "<a href='/PetSystem/public/AltOcupacao/$valor->CodOcupacao'>Alterar</a>";
                  echo "<br>";
                  echo "<br>";
              }

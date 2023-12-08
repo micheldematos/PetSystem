@@ -30,8 +30,8 @@
         <div class="d-flex justify-content-between align-items-center teste">
           <a class="" href="#" style="padding: 0;"><img id="logo-cabecalho-mobile" src="../IMAGENS/logo.png"></a>
           <form class="d-flex justify-content-center" role="search">
-              <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px;"><a class='link' href='/ProjetoWeb/public/LoginFC' style="text-decoration: none; color: #F5F9FF;">LOGIN</a></button>
-              <button type="button" class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder;"><a class='link' href='/ProjetoWeb/public/cadC' style="text-decoration: none; color: #F5F9FF;">CADASTRAR</a></button>
+              <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px;"><a class='link' href='/PetSystem/public/LoginFC' style="text-decoration: none; color: #F5F9FF;">LOGIN</a></button>
+              <button type="button" class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder;"><a class='link' href='/PetSystem/public/cadC' style="text-decoration: none; color: #F5F9FF;">CADASTRAR</a></button>
           </form>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -46,7 +46,7 @@
                 <?php if ($session->get('Id_Cliente')) { ?>
                 <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
                   <div class="container d-flex justify-content-center">
-                    <a class="navbar-brand" href="/ProjetoWeb/public/">
+                    <a class="navbar-brand" href="/PetSystem/public/">
                       <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
@@ -58,10 +58,10 @@
                             </a>
                             <ul class="dropdown-menu">
                               <li>
-                                <a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a>
+                                <a class="dropdown-item" href='/PetSystem/public/cadA'>Cadastrar animal</a>
                               </li>
                               <li>
-                                <a class="dropdown-item" href='/ProjetoWeb/public/ConAnimalCli'>Consultar animais</a>
+                                <a class="dropdown-item" href='/PetSystem/public/ConAnimalCli'>Consultar animais</a>
                               </li>
                             </ul>
                           </li>
@@ -69,7 +69,7 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center teste">
-                      <a class="" href="/ProjetoWeb/public/" style="padding: 0;">
+                      <a class="" href="/PetSystem/public/" style="padding: 0;">
                         <img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
                       </a>
                       <li class="nav-item dropdown">
@@ -78,10 +78,10 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li>
-                            <a class="dropdown-item" href='/ProjetoWeb/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
+                            <a class="dropdown-item" href='/PetSystem/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href='/ProjetoWeb/public/logout'>Logout</a>
+                            <a class="dropdown-item" href='/PetSystem/public/logout'>Logout</a>
                           </li>
                         </ul>
                       </li>
@@ -101,7 +101,7 @@
 
                   <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
                   <div class="container d-flex justify-content-center">
-                    <a class="navbar-brand" href="/ProjetoWeb/public/">
+                    <a class="navbar-brand" href="/PetSystem/public/">
                       <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
@@ -113,10 +113,10 @@
                             Cadastro
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadC'>Cadastrar cliente</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Cadastrar Serviço</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadU'>Cadastrar Usuário</a></li> 
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadC'>Cadastrar cliente</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadTipoServ'>Cadastrar Serviço</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadA'>Cadastrar animal</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadU'>Cadastrar Usuário</a></li> 
                         </ul>
                         </li>
 
@@ -125,10 +125,10 @@
                             Consulta
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConCli'>Consultar cliente</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConTipoServico'>Consultar serviço</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConAnimal'>Consultar animal</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConUsuario'>Consultar usuário</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/ConCli'>Consultar cliente</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/ConTipoServico'>Consultar serviço</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/ConAnimal'>Consultar animal</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/ConUsuario'>Consultar usuário</a></li>
                         </ul>
                         </li>
 
@@ -137,9 +137,9 @@
                             Pendentes
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Agendamento</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadServico'>Horários disponíveis</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadOcupacao'>Atendimento</a></li> 
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadTipoServ'>Agendamento</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadServico'>Horários disponíveis</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadOcupacao'>Atendimento</a></li> 
                         </ul>
                         </li>
                         </ul>
@@ -147,7 +147,7 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center teste">
-                      <a class="" href="/ProjetoWeb/public/" style="padding: 0;">
+                      <a class="" href="/PetSystem/public/" style="padding: 0;">
                         <img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
                       </a>
                       <li class="nav-item dropdown">
@@ -156,10 +156,10 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li>
-                            <a class="dropdown-item" href='/ProjetoWeb/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
+                            <a class="dropdown-item" href='/PetSystem/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href='/ProjetoWeb/public/logout'>Logout</a>
+                            <a class="dropdown-item" href='/PetSystem/public/logout'>Logout</a>
                           </li>
                         </ul>
                       </li>
@@ -175,7 +175,7 @@
                 <?php if ($session->get('Tipo') == "0") { ?>
                   <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
                   <div class="container d-flex justify-content-center">
-                    <a class="navbar-brand" href="/ProjetoWeb/public/">
+                    <a class="navbar-brand" href="/PetSystem/public/">
                       <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
@@ -187,9 +187,9 @@
                             Cadastro
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadC'>Cadastrar cliente</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Cadastrar Serviço</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadA'>Cadastrar animal</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadC'>Cadastrar cliente</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadTipoServ'>Cadastrar Serviço</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadA'>Cadastrar animal</a></li>
                         </ul>
                         </li>
 
@@ -198,9 +198,9 @@
                             Consulta
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConCli'>Consultar cliente</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConTipoServico'>Consultar serviço</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/ConAnimal'>Consultar animal</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/ConCli'>Consultar cliente</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/ConTipoServico'>Consultar serviço</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/ConAnimal'>Consultar animal</a></li>
                         </ul>
                         </li>
 
@@ -209,9 +209,9 @@
                             Pendentes
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadTipoServ'>Agendamento</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadServico'>Horários disponíveis</a></li>
-                            <li><a class="dropdown-item" href='/ProjetoWeb/public/cadOcupacao'>Atendimento</a></li> 
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadTipoServ'>Agendamento</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadServico'>Horários disponíveis</a></li>
+                            <li><a class="dropdown-item" href='/PetSystem/public/cadOcupacao'>Atendimento</a></li> 
                         </ul>
                         </li>
                         </ul>
@@ -219,7 +219,7 @@
                       </div>
                     </div>
                     <div class="d-flex justify-content-between align-items-center teste">
-                      <a class="" href="/ProjetoWeb/public/" style="padding: 0;">
+                      <a class="" href="/PetSystem/public/" style="padding: 0;">
                         <img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
                       </a>
                       <li class="nav-item dropdown">
@@ -228,10 +228,10 @@
                         </a>
                         <ul class="dropdown-menu">
                           <li>
-                            <a class="dropdown-item" href='/ProjetoWeb/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
+                            <a class="dropdown-item" href='/PetSystem/public/AltCliente/<?php echo $session->get('Id_Cliente')?>'>Meu cadastro</a>
                           </li>
                           <li>
-                            <a class="dropdown-item" href='/ProjetoWeb/public/logout'>Logout</a>
+                            <a class="dropdown-item" href='/PetSystem/public/logout'>Logout</a>
                           </li>
                         </ul>
                       </li>
@@ -359,11 +359,11 @@
 
 <body>
     <header class="topo">
-        <a class="link" href="/ProjetoWeb/public">Home</a> &nbsp;
-        <a class='link' href='/ProjetoWeb/public/cadServico'>Serviço</a> &nbsp;
-        <a class='link' href='/ProjetoWeb/public/cadOcupacao'>Ocupação Usuário</a> &nbsp;
-        <a class='link' href='/ProjetoWeb/public/cadAtendimento'> Atendimento</a> &nbsp;
-        <a class="link" href="/ProjetoWeb/public/logout">Logout</a>
+        <a class="link" href="/PetSystem/public">Home</a> &nbsp;
+        <a class='link' href='/PetSystem/public/cadServico'>Serviço</a> &nbsp;
+        <a class='link' href='/PetSystem/public/cadOcupacao'>Ocupação Usuário</a> &nbsp;
+        <a class='link' href='/PetSystem/public/cadAtendimento'> Atendimento</a> &nbsp;
+        <a class="link" href="/PetSystem/public/logout">Logout</a>
     </header>
 
     <div class="container-fluid"><br>

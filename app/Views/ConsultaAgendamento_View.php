@@ -13,7 +13,7 @@
 
 <body>
     <header class="topo">
-        <a class='link' href="/ProjetoWeb/public/">Home</a>
+        <a class='link' href="/PetSystem/public/">Home</a>
     </header>
     <main id="background">
         <div class="container sec2" style="padding-top: 2vh;">
@@ -39,7 +39,7 @@
                 echo "<br>";
                 echo "Usuário Responsável: " , $so->selectNomeUsuarioAtendimento($valor->CodServico);
                 echo "<br>";
-                echo "<a href='/ProjetoWeb/public/AltAnimal/$valor->CodAnimal'>Alterar</a>";
+                echo "<a href='/PetSystem/public/AltAnimal/$valor->CodAnimal'>Alterar</a>";
                 echo "<br>";
                 echo "<br>";
             }

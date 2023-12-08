@@ -65,13 +65,13 @@
                   <!-- <div class="row mb-3">
                     <p>Não tem cadastro?</p>
                     <div>
-                        <button type="button" class="btn btn-danger" style="width: 100%; font-weight: bold;"><a class="fonte-titulo-claro" href="/ProjetoWeb/public/cadC" style="text-decoration: none;">CADASTRE-SE</a></button>  
+                        <button type="button" class="btn btn-danger" style="width: 100%; font-weight: bold;"><a class="fonte-titulo-claro" href="/PetSystem/public/cadC" style="text-decoration: none;">CADASTRE-SE</a></button>  
                         </form>                                            
                     </div>
                   </div>       -->
 
                   <div class="row mb-3">
-                    <p>Se você é cliente, <a href="/ProjetoWeb/public/LoginFC">clique aqui</a></p>
+                    <p>Se você é cliente, <a href="/PetSystem/public/LoginFC">clique aqui</a></p>
                   </div>       
             </div>
         </div>
@@ -127,8 +127,8 @@
 
 <body>
     <header class="topo">
-        <a class="link" href="/ProjetoWeb/public">Home</a> &nbsp;
-        <a class='link' href='/ProjetoWeb/public/cadC'>Cadastrar</a>
+        <a class="link" href="/PetSystem/public">Home</a> &nbsp;
+        <a class='link' href='/PetSystem/public/cadC'>Cadastrar</a>
     </header><br>
 
     <div id="log" class="container ">

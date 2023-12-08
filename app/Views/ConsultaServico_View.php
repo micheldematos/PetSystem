@@ -13,8 +13,8 @@
 
 <body>
     <header class="topo">
-        <a class="link" href="/ProjetoWeb/public">Home</a> &nbsp;
-        <a class="link" href="/ProjetoWeb/public/ConAdm">Consultas</a>
+        <a class="link" href="/PetSystem/public">Home</a> &nbsp;
+        <a class="link" href="/PetSystem/public/ConAdm">Consultas</a>
     </header>
     <main id="background">
         <h2 style="padding-top: 2vh; margin-left: 80vh;"><strong>Consulta Serviço</strong></h2>
@@ -37,9 +37,9 @@
                  echo "<br>";
                  echo "Descrição: ", $valor->Descricao;
                  echo "<br>";
-                 echo "<a href='/ProjetoWeb/public/AltServico/$valor->CodServico'>Alterar</a>";
+                 echo "<a href='/PetSystem/public/AltServico/$valor->CodServico'>Alterar</a>";
                  echo "<br>";
-                 echo "<a href='/ProjetoWeb/public/removeServico/$valor->CodServico'>Remover</a>";
+                 echo "<a href='/PetSystem/public/removeServico/$valor->CodServico'>Remover</a>";
                  echo "<br>";
                  echo "<br>";
              }

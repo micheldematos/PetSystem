@@ -13,11 +13,11 @@
 
 <body>
     <header class="topo">
-        <a class="link" href="/ProjetoWeb/public">Home</a> &nbsp;
-        <a class='link' href='/ProjetoWeb/public/cadTipoServ'>Tipo de Serviço</a> &nbsp;
-        <a class='link' href='/ProjetoWeb/public/cadServico'>Serviço</a> &nbsp;
-        <a class='link' href='/ProjetoWeb/public/cadAtendimento'> Atendimento</a> &nbsp;
-        <a class="link" href="/ProjetoWeb/public/logout">Logout</a>
+        <a class="link" href="/PetSystem/public">Home</a> &nbsp;
+        <a class='link' href='/PetSystem/public/cadTipoServ'>Tipo de Serviço</a> &nbsp;
+        <a class='link' href='/PetSystem/public/cadServico'>Serviço</a> &nbsp;
+        <a class='link' href='/PetSystem/public/cadAtendimento'> Atendimento</a> &nbsp;
+        <a class="link" href="/PetSystem/public/logout">Logout</a>
     </header>
 
     <?php
@@ -69,7 +69,7 @@
                             <input type='time' class='form-control' name='Hora' aria-label='Sizing example input'
                                 aria-describedby='inputGroup-sizing-default'>
                         </div>
-                        <a href='/ProjetoWeb/public/removeOcupacao/$valor->CodOcupacao'>Remover Ocupação</a>
+                        <a href='/PetSystem/public/removeOcupacao/$valor->CodOcupacao'>Remover Ocupação</a>
                         <input class='form-control' type='submit' value='Confirmar' class='btn btn-primary'>
                     </form> ";
                 }
