@@ -30,13 +30,13 @@
                 <?php if (!$session->get('Id_Cliente') and !$session->get('Id_Usuario')) { ?>
                   <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
       <div class="container d-flex justify-content-center">
-          <a class="navbar-brand" href="#"><img id="logo-cabecalho" src="../IMAGENS/logo.png"></a>
+          <a class="navbar-brand" href="#"><img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/LogoPetSystem.png") ?>"></a>
           <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
             
         </div>
 
         <div class="d-flex justify-content-between align-items-center teste">
-          <a class="" href="#" style="padding: 0;"><img id="logo-cabecalho-mobile" src="../IMAGENS/logo.png"></a>
+          <a class="" href="#" style="padding: 0;"><img id="logo-cabecalho-mobile" src="<?php echo base_url("/IMAGENS/LogoPetSystem.png") ?>"></a>
           <form class="d-flex justify-content-center" role="search">
               <button type="button" class="botaoLogin btn btn-outline-light" style="font-weight: bolder; margin-right: 10px;"><a class='link' href='/ProjetoWeb/public/LoginFC' style="text-decoration: none; color: #F5F9FF;">LOGIN</a></button>
               <button type="button" class="botaoAgendar btn btn-dark" style="background-color: #DF322E; font-weight: bolder;"><a class='link' href='/ProjetoWeb/public/cadC' style="text-decoration: none; color: #F5F9FF;">CADASTRAR</a></button>
@@ -110,7 +110,7 @@
                   <nav class="navbar fixed-top navbar-expand-lg navbar-dark" style="background-color: #0D5CB4;">
                   <div class="container d-flex justify-content-center">
                     <a class="navbar-brand" href="/ProjetoWeb/public/">
-                      <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/logo.png") ?>">
+                      <img id="logo-cabecalho" src="<?php echo base_url("/IMAGENS/LogoPetSystem.png") ?>">
                     </a>
                     <div class="collapse navbar-collapse" id="navbarNav" style="font-size: 16px;">
                       <div>

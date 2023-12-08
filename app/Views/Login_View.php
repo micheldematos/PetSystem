@@ -12,7 +12,7 @@
     <section class="row">
       
         <div class="col-md-5 img_home" style="overflow: hidden; padding: 0;">
-            <img src="<?php echo base_url("/IMAGENS/cachorro_01.jpg") ?>" style="height: 100vh;">
+            <img src="<?php echo base_url("/IMAGENS/LogoPetSystem.png") ?>" style="height: 100vh;">
         </div>
         
         <div class="col d-flex justify-content-center" style="height: 100vh;">

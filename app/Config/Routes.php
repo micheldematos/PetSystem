@@ -9,7 +9,6 @@ $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 
-
 // Home
 $routes->get('/', 'Home::index');
 
@@ -29,7 +28,6 @@ $routes->get("AltAnimal/(:num)", "Dados::alterarAnimal/$1");
 $routes->post("AltAnimal/(:num)", "Dados::alterarAnimal2/$1");
 $routes->get("IntAnimal/(:num)", "Dados::inativarAnimais/$1");
 $routes->get("AtvAnimal/(:num)", "Dados::ativarAnimais/$1");
-
 
 // Agendamento
 $routes->get("ConAgendamento", "Dados::consultaAgendamento");
