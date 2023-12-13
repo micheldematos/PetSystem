@@ -77,7 +77,7 @@ class SelectOptions extends Model
     }
 
     function selectNomeUsuarioAtendimento($cod){
-        $Con = mysqli_connect("127.0.0.1:3346", "root", "");
+        $Con = mysqli_connect("127.0.0.1:3316", "root", "");
         mysqli_select_db($Con,"projetoweb");
         $res = mysqli_query($Con, "SELECT CodUsuario FROM Servico WHERE CodServico = '$cod'");
         while($dados = mysqli_fetch_array($res)){
